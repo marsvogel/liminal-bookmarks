@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { 
   Terminal, Cpu, Zap, 
   Cat, Dog, Rabbit, Bird, Fish, 
@@ -175,10 +175,56 @@ function App() {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
-                  <h1 className="text-xl font-bold font-mono">
-                    <GlitchText intensity="high">
-                      Liminal {animalNames[currentIconIndex]}
-                    </GlitchText>
+                  <h1 className="text-xl font-bold font-mono relative overflow-hidden">
+                    <span className="invisible">Liminal {animalNames[currentIconIndex]}</span>
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentIconIndex}
+                        className="absolute inset-0 flex items-center"
+                        initial={{ 
+                          y: Math.random() > 0.5 ? 50 : -50,
+                          x: Math.random() * 100 - 50,
+                          rotate: Math.random() * 90 - 45,
+                          scale: 0,
+                          opacity: 0,
+                          filter: "blur(10px)"
+                        }}
+                        animate={{ 
+                          y: 0,
+                          x: 0,
+                          rotate: 0,
+                          scale: 1,
+                          opacity: 1,
+                          filter: "blur(0px)"
+                        }}
+                        exit={{ 
+                          y: Math.random() > 0.5 ? -50 : 50,
+                          x: Math.random() * 100 - 50,
+                          rotate: Math.random() * 90 - 45,
+                          scale: 0,
+                          opacity: 0,
+                          filter: "blur(10px)"
+                        }}
+                        transition={{
+                          duration: 0.8,
+                          ease: [0.43, 0.13, 0.23, 0.96],
+                          scale: {
+                            type: "spring",
+                            damping: 12,
+                            stiffness: 100,
+                          },
+                          rotate: {
+                            type: "spring",
+                            damping: 15,
+                            stiffness: 80,
+                          }
+                        }}
+                      >
+                        <GlitchText intensity="high">
+                          Liminal {animalNames[currentIconIndex]}
+                        </GlitchText>
+                      </motion.div>
+                    </AnimatePresence>
                   </h1>
                 </motion.div>
               </div>

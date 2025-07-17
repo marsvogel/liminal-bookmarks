@@ -1,4 +1,4 @@
-import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit } from 'lucide-react';
+import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud } from 'lucide-react';
 
 export interface NewsItem {
   id: string;
@@ -81,5 +81,47 @@ export const newsData: NewsItem[] = [
     category: "AI Research",
     link: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
     icon: BrainCircuit
+  },
+  {
+    id: "6",
+    title: "Sergey Brin über KI-Entwicklungen bei Google",
+    summary: "In einem Reddit-Thread wird diskutiert, dass Google-Mitgründer Sergey Brin über KI-Fortschritte gesprochen hat, die intern nicht weit verbreitet werden. Die Diskussion dreht sich um die Balance zwischen Transparenz und Wettbewerbsvorteilen in der KI-Entwicklung.",
+    keyFacts: [
+      "Interne KI-Entwicklungen bei Google",
+      "Diskussion über Transparenz vs. Geheimhaltung",
+      "Community-Spekulationen über KI-Fortschritte"
+    ],
+    date: "2025-07-15",
+    category: "AI Industry",
+    link: "https://www.reddit.com/r/singularity/comments/1kv7hm2/sergey_brin_we_dont_circulate_this_too_much_in/",
+    icon: Sparkles
+  },
+  {
+    id: "7",
+    title: "Wann ist Technologie kein Hype? Tulpen, Toiletten, Züge und Tabs",
+    summary: "Alex Moon argumentiert, dass alle Technologie als 'Hype' beginnt und erst wirklich transformativ wird, wenn sie eine narrensichere Benutzeroberfläche und allgegenwärtige Infrastruktur entwickelt. Technologien werden vom aufregenden Neuland zum essentiellen Werkzeug, wenn sie so nahtlos integriert sind, dass Nutzer sie nicht mehr bewusst wahrnehmen.",
+    keyFacts: [
+      "Technologie beginnt immer als Hype",
+      "Transformation durch perfekte UI und Infrastruktur",
+      "Browser-Tabs als Beispiel für unsichtbare Innovation"
+    ],
+    date: "2025-07-15",
+    category: "Tech Philosophy",
+    link: "https://ajmoon.com/posts/when-is-tech-not-hype-tulips-toilets-trains-and-tabs",
+    icon: TabletSmartphone
+  },
+  {
+    id: "8",
+    title: "wttr.in - Wetter im Terminal",
+    summary: "Ein vielseitiger, konsolen-orientierter Wettervorhersagedienst, der täglich Millionen von Anfragen verarbeitet. Unterstützt mehrere Ausgabeformate (ANSI, HTML, PNG, JSON), 54 Sprachen und bietet detaillierte Wetterdaten inklusive Mondphasen - alles über simple curl-Befehle abrufbar.",
+    keyFacts: [
+      "Millionen tägliche Anfragen",
+      "54 Sprachen und diverse Ausgabeformate",
+      "Mondphasen und astronomische Daten"
+    ],
+    date: "2025-07-16",
+    category: "Open Source",
+    link: "https://github.com/chubin/wttr.in",
+    icon: Cloud
   }
 ];

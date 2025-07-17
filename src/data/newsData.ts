@@ -11,12 +11,12 @@ export interface NewsItem {
 export const newsData: NewsItem[] = [
   {
     id: "1",
-    title: "The sound of inevitability",
-    summary: "Tom Renner critiques 'inevitabilism' in tech discourse, particularly around AI and LLMs. He argues against accepting technological developments as unavoidable, emphasizing that people should critically examine and actively choose their technological future.",
+    title: "Der Klang der Unvermeidlichkeit",
+    summary: "Tom Renner kritisiert den 'Unvermeidlichkeits-Diskurs' in der Tech-Welt, besonders im Bezug auf KI und LLMs. Er argumentiert gegen die Akzeptanz technologischer Entwicklungen als unausweichlich und betont, dass Menschen ihre technologische Zukunft kritisch hinterfragen und aktiv wählen sollten.",
     keyFacts: [
-      "Challenges tech determinism narrative",
-      "Advocates for active choice in tech future",
-      "Questions LLM inevitability discourse"
+      "Hinterfragt Tech-Determinismus",
+      "Plädiert für aktive Zukunftsgestaltung",
+      "Kritisiert LLM-Unvermeidlichkeits-Narrativ"
     ],
     date: "2025-07-12",
     category: "AI Philosophy",
@@ -24,12 +24,12 @@ export const newsData: NewsItem[] = [
   },
   {
     id: "2",
-    title: "Adding a feature because ChatGPT incorrectly thinks it exists",
-    summary: "Adrian Holovaty discovered ChatGPT was incorrectly telling users about a non-existent ASCII tablature import feature in Soundslice. In response to user confusion, his team decided to actually develop the feature to meet unexpected market demand.",
+    title: "Feature entwickelt, weil ChatGPT glaubte, sie existiere bereits",
+    summary: "Adrian Holovaty entdeckte, dass ChatGPT Nutzern fälschlicherweise von einer nicht existierenden ASCII-Tabulatur-Import-Funktion in Soundslice erzählte. Als Reaktion auf die Verwirrung der Nutzer entschied sein Team, die Funktion tatsächlich zu entwickeln.",
     keyFacts: [
-      "ChatGPT created false feature expectations",
-      "Team built feature to match AI hallucination",
-      "Unexpected market validation via AI error"
+      "ChatGPT erzeugte falsche Feature-Erwartungen",
+      "Team baute Feature basierend auf KI-Halluzination",
+      "Unerwartete Marktvalidierung durch KI-Fehler"
     ],
     date: "2025-07-07",
     category: "AI Impact",
@@ -37,12 +37,12 @@ export const newsData: NewsItem[] = [
   },
   {
     id: "3",
-    title: "MacPaint Art From The Mid-80s Still Looks Great Today",
-    summary: "A collection of vintage digital artwork created using MacPaint in the mid-1980s showcases artistic creativity on early computer systems. The author explores images from the Discmaster archive, highlighting the timeless appeal of these limited-graphics creations.",
+    title: "MacPaint-Kunst aus den 80ern sieht heute noch großartig aus",
+    summary: "Eine Sammlung digitaler Vintage-Kunstwerke, die mit MacPaint Mitte der 1980er Jahre erstellt wurden, zeigt künstlerische Kreativität auf frühen Computersystemen. Der Autor erkundet Bilder aus dem Discmaster-Archiv und hebt die zeitlose Anziehungskraft dieser grafisch limitierten Kreationen hervor.",
     keyFacts: [
-      "1980s digital art preservation",
-      "MacPaint's creative limitations as strength",
-      "Historical computing aesthetics"
+      "Bewahrung digitaler Kunst der 1980er",
+      "MacPaints kreative Grenzen als Stärke",
+      "Historische Computer-Ästhetik"
     ],
     date: "2025-07-12",
     category: "Digital Art",
@@ -50,12 +50,12 @@ export const newsData: NewsItem[] = [
   },
   {
     id: "4",
-    title: "Introducing Kiro",
-    summary: "Kiro is an AI-powered IDE that helps developers transform prototypes into production-ready applications through 'spec-driven development'. The platform offers specs for clarity and documentation, plus hooks that automate quality checks and development tasks.",
+    title: "Kiro - Eine neue KI-gestützte Entwicklungsumgebung",
+    summary: "Kiro ist eine KI-gestützte IDE, die Entwicklern hilft, Prototypen durch 'spec-driven development' in produktionsreife Anwendungen zu verwandeln. Die Plattform bietet Spezifikationen für Klarheit und Dokumentation sowie Hooks, die Qualitätsprüfungen und Entwicklungsaufgaben automatisieren.",
     keyFacts: [
-      "AI-powered spec-driven development",
-      "Automated quality checks via hooks",
-      "Prototype to production workflow"
+      "KI-gestützte spezifikationsgetriebene Entwicklung",
+      "Automatisierte Qualitätsprüfungen via Hooks",
+      "Workflow von Prototyp zu Produktion"
     ],
     date: "2025-07-14",
     category: "Development Tools",
@@ -63,12 +63,12 @@ export const newsData: NewsItem[] = [
   },
   {
     id: "5",
-    title: "Measuring the Impact of Early-2025 AI on Developer Productivity",
-    summary: "METR's randomized controlled trial found that experienced open-source developers using AI tools took 19% longer to complete coding tasks, contrary to expectations of a 24% speedup. The study highlights the complexity of measuring AI's real-world impact on development.",
+    title: "KI-Tools verlangsamen erfahrene Entwickler um 19%",
+    summary: "METRs randomisierte kontrollierte Studie ergab, dass erfahrene Open-Source-Entwickler mit KI-Tools 19% länger für Programmieraufgaben benötigten - entgegen der Erwartung einer 24%igen Beschleunigung. Die Studie zeigt die Komplexität bei der Messung der realen Auswirkungen von KI auf die Entwicklung.",
     keyFacts: [
-      "AI tools slowed developers by 19%",
-      "Developers expected 24% speedup",
-      "Challenges productivity assumptions"
+      "KI-Tools verlangsamten Entwickler um 19%",
+      "Entwickler erwarteten 24% Beschleunigung",
+      "Hinterfragt Produktivitätsannahmen"
     ],
     date: "2025-07-10",
     category: "AI Research",

@@ -10,6 +10,7 @@ import { ScanLines } from './components/ScanLines';
 import { GlitchText } from './components/GlitchText';
 import { newsData } from './data/newsData';
 import './styles/globals.css';
+import './styles/masonry.css';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -216,11 +217,10 @@ function App() {
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 py-6">
           {/* News Masonry Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+          <div className="masonry-grid">
             {newsData.map((news, index) => (
               <motion.div
                 key={news.id}
-                className="break-inside-avoid"
                 style={{
                   y: useTransform(scrollY, [0, 2000], [0, index % 2 === 0 ? -50 : -100]),
                 }}

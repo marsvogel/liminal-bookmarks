@@ -1,0 +1,30 @@
+/* Masonry Grid Styles */
+@supports (grid-template-rows: masonry) {
+  .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: masonry;
+    gap: 1.5rem;
+  }
+}
+
+/* Fallback for browsers without masonry support */
+@supports not (grid-template-rows: masonry) {
+  @media (min-width: 768px) {
+    .masonry-grid {
+      column-count: 2;
+      column-gap: 1.5rem;
+    }
+    
+    .masonry-grid > * {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+}

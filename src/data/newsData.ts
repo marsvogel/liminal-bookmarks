@@ -11,80 +11,67 @@ export interface NewsItem {
 export const newsData: NewsItem[] = [
   {
     id: "1",
-    title: "Neural Networks erreichen menschliche Kreativität",
-    summary: "Eine bahnbrechende Studie zeigt, dass KI-Systeme nicht nur menschliche Kreativität nachahmen, sondern möglicherweise übertreffen können. Die Grenzen zwischen künstlicher und natürlicher Intelligenz verschwimmen zusehends.",
+    title: "The sound of inevitability",
+    summary: "Tom Renner critiques 'inevitabilism' in tech discourse, particularly around AI and LLMs. He argues against accepting technological developments as unavoidable, emphasizing that people should critically examine and actively choose their technological future.",
     keyFacts: [
-      "99.7% Erfolgsrate bei Turing-Tests",
-      "Autonome Kunstwerke ohne menschlichen Input",
-      "Selbstoptimierung in Echtzeit"
+      "Challenges tech determinism narrative",
+      "Advocates for active choice in tech future",
+      "Questions LLM inevitability discourse"
     ],
-    date: "2024-12-28",
-    category: "AI Research",
-    link: "#"
+    date: "2025-07-12",
+    category: "AI Philosophy",
+    link: "https://tomrenner.com/posts/llm-inevitabilism/"
   },
   {
     id: "2",
-    title: "Quantum Computing enters the mainstream",
-    summary: "IBM's latest quantum processor achieves error rates below 0.1%. Commercial applications werden zur Realität, während traditionelle Verschlüsselung obsolet wird.",
+    title: "Adding a feature because ChatGPT incorrectly thinks it exists",
+    summary: "Adrian Holovaty discovered ChatGPT was incorrectly telling users about a non-existent ASCII tablature import feature in Soundslice. In response to user confusion, his team decided to actually develop the feature to meet unexpected market demand.",
     keyFacts: [
-      "1000+ Qubit Processing Power",
-      "Commercial availability Q2 2025",
-      "RSA encryption completely broken"
+      "ChatGPT created false feature expectations",
+      "Team built feature to match AI hallucination",
+      "Unexpected market validation via AI error"
     ],
-    date: "2024-12-27",
-    category: "Quantum Tech",
-    link: "#"
+    date: "2025-07-07",
+    category: "AI Impact",
+    link: "https://www.holovaty.com/writing/chatgpt-fake-feature/"
   },
   {
     id: "3",
-    title: "Open Source AI models surpass proprietary giants",
-    summary: "Community-entwickelte Modelle übertreffen GPT-4 und Claude in mehreren Benchmarks. Die Demokratisierung der KI beschleunigt sich exponentiell.",
+    title: "MacPaint Art From The Mid-80s Still Looks Great Today",
+    summary: "A collection of vintage digital artwork created using MacPaint in the mid-1980s showcases artistic creativity on early computer systems. The author explores images from the Discmaster archive, highlighting the timeless appeal of these limited-graphics creations.",
     keyFacts: [
-      "98.3% accuracy on reasoning tasks",
-      "Zero training costs for developers",
-      "Real-time model updates via blockchain"
+      "1980s digital art preservation",
+      "MacPaint's creative limitations as strength",
+      "Historical computing aesthetics"
     ],
-    date: "2024-12-26",
-    category: "Open Source",
-    link: "#"
+    date: "2025-07-12",
+    category: "Digital Art",
+    link: "https://blog.decryption.net.au/posts/macpaint.html"
   },
   {
     id: "4",
-    title: "Cybersecurity: Zero-Day exploits powered by AI",
-    summary: "Automatisierte Hacking-Tools entdecken Schwachstellen schneller als Patches entwickelt werden können. Ein neues Wettrüsten in der digitalen Sicherheit beginnt.",
+    title: "Introducing Kiro",
+    summary: "Kiro is an AI-powered IDE that helps developers transform prototypes into production-ready applications through 'spec-driven development'. The platform offers specs for clarity and documentation, plus hooks that automate quality checks and development tasks.",
     keyFacts: [
-      "AI discovers vulnerabilities in < 1 hour",
-      "Traditional firewalls 89% ineffective",
-      "Quantum-resistant protocols mandatory by 2025"
+      "AI-powered spec-driven development",
+      "Automated quality checks via hooks",
+      "Prototype to production workflow"
     ],
-    date: "2024-12-25",
-    category: "Security",
-    link: "#"
+    date: "2025-07-14",
+    category: "Development Tools",
+    link: "https://kiro.dev/blog/introducing-kiro/"
   },
   {
     id: "5",
-    title: "Brain-Computer Interfaces achieve seamless integration",
-    summary: "Neuralink's competitor erreicht bidirektionale Kommunikation zwischen Gehirn und Cloud. Die Grenze zwischen biologischer und digitaler Intelligenz löst sich auf.",
+    title: "Measuring the Impact of Early-2025 AI on Developer Productivity",
+    summary: "METR's randomized controlled trial found that experienced open-source developers using AI tools took 19% longer to complete coding tasks, contrary to expectations of a 24% speedup. The study highlights the complexity of measuring AI's real-world impact on development.",
     keyFacts: [
-      "Direct thought-to-text at 240 WPM",
-      "Memory upload/download capability",
-      "Zero rejection rate in clinical trials"
+      "AI tools slowed developers by 19%",
+      "Developers expected 24% speedup",
+      "Challenges productivity assumptions"
     ],
-    date: "2024-12-24",
-    category: "BioTech",
-    link: "#"
-  },
-  {
-    id: "6",
-    title: "Autonomous Code Evolution",
-    summary: "Self-modifying programs erreichen Software-Evolution ohne menschliche Intervention. Legacy-Systeme transformieren sich autonom zu modernen Architekturen.",
-    keyFacts: [
-      "Code rewrites itself in real-time",
-      "99.9% bug reduction achieved",
-      "Human developers becoming obsolete"
-    ],
-    date: "2024-12-23",
-    category: "Development",
-    link: "#"
+    date: "2025-07-10",
+    category: "AI Research",
+    link: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
   }
 ];

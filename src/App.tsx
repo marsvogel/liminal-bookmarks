@@ -180,69 +180,66 @@ function App() {
                     <div className="relative overflow-hidden">
                       <span className="invisible">{animalNames[currentIconIndex]}</span>
                       <AnimatePresence mode="wait">
-                        <motion.div
+                        <motion.span
                           key={currentIconIndex}
                           className="absolute inset-0 flex items-center"
                           initial={{ 
+                            filter: "blur(20px) contrast(0.1)",
                             opacity: 0,
-                            x: -10,
-                            filter: "blur(8px)",
+                            scale: 1.5,
                           }}
                           animate={{ 
-                            opacity: [0, 1, 1, 0.8, 1],
-                            x: [10, -2, 1, -1, 0],
-                            filter: ["blur(8px)", "blur(0px)", "blur(2px)", "blur(0px)", "blur(0px)"],
+                            filter: "blur(0px) contrast(1)",
+                            opacity: 1,
+                            scale: 1,
                           }}
                           exit={{ 
-                            opacity: 0,
-                            x: 10,
-                            filter: "blur(8px)",
+                            filter: [
+                              "blur(0px) contrast(1)",
+                              "blur(2px) contrast(2) saturate(0)",
+                              "blur(4px) contrast(5) brightness(2)",
+                              "blur(20px) contrast(0.1) brightness(0)"
+                            ],
+                            opacity: [1, 1, 0.8, 0],
+                            scale: [1, 0.98, 0.95, 0.8],
                           }}
                           transition={{
-                            duration: 0.4,
-                            times: [0, 0.2, 0.5, 0.8, 1],
-                            ease: "easeInOut",
+                            duration: 0.5,
+                            exit: {
+                              duration: 0.3,
+                              times: [0, 0.3, 0.7, 1]
+                            }
                           }}
                         >
-                          <motion.span
-                            animate={{
-                              x: [0, -1, 1, -0.5, 0],
-                              y: [0, 0.5, -0.5, 0.25, 0],
-                            }}
-                            transition={{
-                              duration: 0.15,
-                              repeat: 2,
-                              repeatType: "reverse",
-                            }}
-                          >
-                            <GlitchText intensity="high">
+                          <span className="relative">
+                            {animalNames[currentIconIndex]}
+                            {/* Exit glitch effect */}
+                            <motion.span
+                              className="absolute inset-0 text-cyan-400 mix-blend-screen"
+                              initial={{ opacity: 0 }}
+                              exit={{ 
+                                opacity: [0, 0.8, 0.4, 0],
+                                x: [-1, 2, -3, 0],
+                                scaleX: [1, 1.1, 0.9, 1],
+                              }}
+                              transition={{ duration: 0.3 }}
+                            >
                               {animalNames[currentIconIndex]}
-                            </GlitchText>
-                          </motion.span>
-                          {/* Glitch layers */}
-                          <motion.span
-                            className="absolute inset-0 text-cyan-400 mix-blend-screen"
-                            initial={{ opacity: 0 }}
-                            animate={{ 
-                              opacity: [0, 0.7, 0],
-                              x: [-2, 2, -1],
-                            }}
-                            transition={{ duration: 0.2, delay: 0.1 }}
-                          >
-                            {animalNames[currentIconIndex]}
-                          </motion.span>
-                          <motion.span
-                            className="absolute inset-0 text-red-400 mix-blend-screen"
-                            initial={{ opacity: 0 }}
-                            animate={{ 
-                              opacity: [0, 0.5, 0],
-                              x: [2, -2, 1],
-                            }}
-                            transition={{ duration: 0.2, delay: 0.15 }}
-                          >
-                            {animalNames[currentIconIndex]}
-                          </motion.span>
-                        </motion.div>
+                            </motion.span>
+                            <motion.span
+                              className="absolute inset-0 text-red-400 mix-blend-screen"
+                              initial={{ opacity: 0 }}
+                              exit={{ 
+                                opacity: [0, 0.6, 0.3, 0],
+                                x: [1, -2, 3, 0],
+                                scaleX: [1, 0.9, 1.1, 1],
+                              }}
+                              transition={{ duration: 0.3, delay: 0.05 }}
+                            >
+                              {animalNames[currentIconIndex]}
+                            </motion.span>
+                          </span>
+                        </motion.span>
                       </AnimatePresence>
                     </div>
                   </h1>

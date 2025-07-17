@@ -9,6 +9,7 @@ import { NewsCard } from './components/NewsCard';
 import { ScanLines } from './components/ScanLines';
 import { GlitchText } from './components/GlitchText';
 import { newsData } from './data/newsData';
+import { useMasonry } from './hooks/useMasonry';
 import './styles/globals.css';
 import './styles/masonry.css';
 
@@ -16,6 +17,7 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
   const { scrollY } = useScroll();
+  const masonryRef = useMasonry({ mobile: 1, tablet: 2, desktop: 3 }, 24);
   
   // Parallax transforms
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
@@ -217,16 +219,14 @@ function App() {
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 py-6">
           {/* News Masonry Grid */}
-          <div className="masonry-grid">
+          <div ref={masonryRef} className="masonry-container">
             {newsData.map((news, index) => (
-              <motion.div
+              <div
                 key={news.id}
-                style={{
-                  y: useTransform(scrollY, [0, 2000], [0, index % 2 === 0 ? -50 : -100]),
-                }}
+                className="masonry-item"
               >
                 <NewsCard news={news} index={index} />
-              </motion.div>
+              </div>
             ))}
           </div>
 

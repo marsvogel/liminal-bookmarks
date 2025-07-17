@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Terminal, Cpu, Zap } from 'lucide-react';
+import { 
+  Terminal, Cpu, Zap, 
+  Cat, Dog, Rabbit, Bird, Fish, 
+  Turtle, Squirrel, Bug, Snail, Rat
+} from 'lucide-react';
 import { NewsCard } from './components/NewsCard';
 import { ScanLines } from './components/ScanLines';
 import { GlitchText } from './components/GlitchText';

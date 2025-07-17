@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/ai-combinator/',
+  base: '/liminal-bookmarks/',
 });

@@ -73,14 +73,14 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
   return (
     <motion.a
       href={news.link}
-      className="relative group block mb-8"
+      className="relative group block mb-6"
       variants={cardVariants}
       initial="initial"
       animate="animate"
       whileHover="hover"
     >
       <motion.div
-        className="relative bg-slate-900/50 backdrop-blur-sm border rounded-xl p-6 h-full overflow-hidden cursor-pointer"
+        className="relative bg-slate-900/50 backdrop-blur-sm border rounded-xl p-4 h-full overflow-hidden cursor-pointer"
         variants={borderVariants}
         style={{
           backgroundImage: `
@@ -102,7 +102,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
         />
 
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex items-start justify-between mb-3">
           <motion.span
             className={`text-xs font-mono px-2 py-1 rounded ${getCategoryColor(news.category)}`}
             whileHover={{ scale: 1.05 }}
@@ -116,20 +116,20 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
         </div>
 
         {/* Title */}
-        <h2 className="text-xl font-bold mb-3 text-white leading-tight">
+        <h2 className="text-lg font-bold mb-2 text-white leading-tight">
           <GlitchText intensity="medium">
             {news.title}
           </GlitchText>
         </h2>
 
         {/* Summary */}
-        <p className="text-slate-300 mb-4 leading-relaxed font-light">
+        <p className="text-sm text-slate-300 mb-3 leading-relaxed font-light">
           {news.summary}
         </p>
 
         {/* Key Facts */}
-        <div className="mb-6">
-          <h3 className="text-sm font-mono text-cyan-400 mb-2 uppercase tracking-wider">
+        <div className="mb-4">
+          <h3 className="text-xs font-mono text-cyan-400 mb-2 uppercase tracking-wider">
             Key Facts
           </h3>
           <ul className="space-y-1">
@@ -141,7 +141,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: (index * 0.1) + (factIndex * 0.05) }}
               >
-                <span className="text-green-400 mt-1 text-xs">▸</span>
+                <span className="text-green-400 text-xs flex-shrink-0" style={{ paddingTop: '2px' }}>▸</span>
                 <span>{fact}</span>
               </motion.li>
             ))}

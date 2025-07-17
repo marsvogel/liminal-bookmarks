@@ -121,7 +121,7 @@ function App() {
           animate="animate"
           style={{ y: y1 }}
         >
-          <div className="max-w-7xl mx-auto px-6 py-8">
+          <div className="max-w-7xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <motion.div
@@ -165,7 +165,7 @@ function App() {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
-                  <h1 className="text-2xl font-bold font-mono">
+                  <h1 className="text-xl font-bold font-mono">
                     <GlitchText intensity="high">
                       Liminal Feed
                     </GlitchText>
@@ -178,9 +178,9 @@ function App() {
         </motion.header>
 
         {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-6 py-12">
+        <main className="max-w-7xl mx-auto px-4 py-6">
           {/* News Masonry Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {newsData.map((news, index) => (
               <motion.div
                 key={news.id}
@@ -196,7 +196,7 @@ function App() {
 
           {/* Footer */}
           <motion.footer
-            className="mt-24 pt-12 border-t border-slate-800/50"
+            className="mt-12 pt-8 border-t border-slate-800/50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}

@@ -175,40 +175,36 @@ function App() {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
-                  <h1 className="text-xl font-bold font-mono flex items-center gap-1">
-                    <span>Liminal</span>
-                    <div className="relative">
-                      <AnimatePresence mode="wait">
+                  <h1 className="text-xl font-bold font-mono">
+                    <span>Liminal </span>
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={currentIconIndex}
+                        className="inline-block"
+                        initial={{ width: 0 }}
+                        animate={{ width: "auto" }}
+                        exit={{ 
+                          opacity: 0,
+                          width: 0,
+                        }}
+                        transition={{
+                          width: { duration: animalNames[currentIconIndex].length * 0.05 },
+                          opacity: { duration: 0.2 },
+                        }}
+                        style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+                      >
+                        {animalNames[currentIconIndex]}
                         <motion.span
-                          key={currentIconIndex}
-                          className="inline-block"
-                          initial={{ width: 0 }}
-                          animate={{ width: "auto" }}
-                          exit={{ 
-                            opacity: 0,
-                            width: 0,
-                            marginLeft: -8,
-                          }}
+                          className="inline-block w-2 h-5 bg-cyan-400 ml-0.5 align-middle"
+                          animate={{ opacity: [1, 1, 0, 0] }}
                           transition={{
-                            width: { duration: animalNames[currentIconIndex].length * 0.05 },
-                            opacity: { duration: 0.2 },
-                            marginLeft: { duration: 0.3 }
+                            duration: 1,
+                            repeat: Infinity,
+                            times: [0, 0.5, 0.5, 1]
                           }}
-                          style={{ overflow: "hidden", whiteSpace: "nowrap" }}
-                        >
-                          {animalNames[currentIconIndex]}
-                          <motion.span
-                            className="inline-block w-2 h-5 bg-cyan-400 ml-0.5"
-                            animate={{ opacity: [1, 1, 0, 0] }}
-                            transition={{
-                              duration: 1,
-                              repeat: Infinity,
-                              times: [0, 0.5, 0.5, 1]
-                            }}
-                          />
-                        </motion.span>
-                      </AnimatePresence>
-                    </div>
+                        />
+                      </motion.span>
+                    </AnimatePresence>
                   </h1>
                 </motion.div>
               </div>

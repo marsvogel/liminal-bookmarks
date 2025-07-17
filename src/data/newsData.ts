@@ -1,4 +1,4 @@
-import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud } from 'lucide-react';
+import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud, BookOpenCheck, Brain, Network } from 'lucide-react';
 
 export interface NewsItem {
   id: string;
@@ -123,5 +123,47 @@ export const newsData: NewsItem[] = [
     category: "Open Source",
     link: "https://github.com/chubin/wttr.in",
     icon: Cloud
+  },
+  {
+    id: "9",
+    title: "Rules of React",
+    summary: "Diese Seite erklärt die fundamentalen Regeln von React, die befolgt werden müssen, um fehlerfreien und wartbaren Code zu schreiben. Es handelt sich um strikte Regeln, nicht nur Richtlinien – bei Verstößen entstehen wahrscheinlich Bugs in der Anwendung. Die Regeln betreffen hauptsächlich die Reinheit von Komponenten, den korrekten Aufruf von Hooks und die Unveränderlichkeit von Props und State.",
+    keyFacts: [
+      "Komponenten und Hooks müssen rein (pure) sein und keine Seiteneffekte während des Renderns haben",
+      "Hooks dürfen nur auf oberster Ebene aufgerufen werden, niemals in Schleifen oder Bedingungen",
+      "Props und State sind unveränderlich und dürfen nicht direkt modifiziert werden"
+    ],
+    date: "2025-07-17",
+    category: "React Best Practices",
+    link: "https://react.dev/reference/rules",
+    icon: BookOpenCheck
+  },
+  {
+    id: "10",
+    title: "Thinking in React",
+    summary: "Dieses Tutorial zeigt einen systematischen Ansatz zur Entwicklung von React-Anwendungen, indem es den Prozess vom Design bis zur interaktiven App erklärt. Es lehrt, wie man UIs in Komponenten aufteilt, State minimal hält und Datenfluss richtig implementiert. Der Fokus liegt auf der React-spezifischen Denkweise für die Strukturierung von Benutzeroberflächen.",
+    keyFacts: [
+      "Die UI wird in eine hierarchische Komponentenstruktur aufgeteilt, wobei jede Komponente einen Teil des Datenmodells darstellt",
+      "Der minimale State wird identifiziert, indem alles entfernt wird, was aus anderen States berechnet werden kann",
+      "State sollte in der niedrigsten gemeinsamen Komponente leben, die ihn benötigt oder darüber"
+    ],
+    date: "2025-07-17",
+    category: "React Tutorial",
+    link: "https://react.dev/learn/thinking-in-react",
+    icon: Brain
+  },
+  {
+    id: "11",
+    title: "Model Context Protocol (MCP)",
+    summary: "Das Model Context Protocol (MCP) ist ein offenes Protokoll, das standardisiert, wie Anwendungen Kontext an KI-Modelle bereitstellen. Es ermöglicht eine einheitliche Verbindung zwischen verschiedenen Datenquellen, Tools und KI-Modellen, ähnlich wie ein USB-C-Anschluss für KI-Anwendungen.",
+    keyFacts: [
+      "MCP bietet eine wachsende Liste von vorintegrierten Anbindungen für KI-Modelle",
+      "Es erlaubt den flexiblen Wechsel zwischen verschiedenen KI-Anbietern",
+      "Das Protokoll implementiert Best Practices für die Datensicherheit in der Infrastruktur"
+    ],
+    date: "2025-07-17",
+    category: "Protocol",
+    link: "https://modelcontextprotocol.io/",
+    icon: Network
   }
 ];

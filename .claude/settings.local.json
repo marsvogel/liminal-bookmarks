@@ -16,7 +16,10 @@
       "WebFetch(domain:ajmoon.com)",
       "WebFetch(domain:github.com)",
       "Bash(npm run dev:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "WebFetch(domain:react.dev)",
+      "WebFetch(domain:react.dev)",
+      "WebFetch(domain:modelcontextprotocol.io)"
     ],
     "deny": []
   }

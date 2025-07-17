@@ -3,8 +3,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { 
   Terminal, Cat, Dog, Rabbit, Bird, Fish, 
   Turtle, Squirrel, Bug, Snail, Rat,
-  Coffee, Pizza, Apple, Cherry, Grape, Carrot, Cookie, IceCream,
-  Tree, Flower, Leaf, Mountain, Waves, Palmtree, Trees, Sprout,
+  Coffee, Pizza, Apple, Cherry, Grape, Carrot, Cookie, IceCream2,
+  TreePine, Flower, Leaf, Mountain, Waves, Palmtree, Trees, Sprout,
   Sun, Cloud, CloudRain, Snowflake, Wind, CloudSnow, Rainbow, Zap
 } from 'lucide-react';
 import { NewsCard } from './components/NewsCard';
@@ -33,9 +33,9 @@ function App() {
     // Animals
     Cat, Dog, Rabbit, Bird, Fish, Turtle, Squirrel, Bug, Snail, Rat,
     // Food & Beverage
-    Coffee, Pizza, Apple, Cherry, Grape, Carrot, Cookie, IceCream,
+    Coffee, Pizza, Apple, Cherry, Grape, Carrot, Cookie, IceCream2,
     // Nature
-    Tree, Flower, Leaf, Mountain, Waves, Palmtree, Trees, Sprout,
+    TreePine, Flower, Leaf, Mountain, Waves, Palmtree, Trees, Sprout,
     // Weather
     Sun, Cloud, CloudRain, Snowflake, Wind, CloudSnow, Rainbow, Zap
   ];

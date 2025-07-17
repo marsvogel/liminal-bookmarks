@@ -104,7 +104,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
         {/* Icon with glitch effect */}
         {news.icon && (
           <motion.div
-            className="absolute top-3 right-3 opacity-20"
+            className="absolute bottom-4 right-4 opacity-20"
             animate={{
               x: [0, -2, 3, -1, 0],
               y: [0, 1, -2, 2, 0],

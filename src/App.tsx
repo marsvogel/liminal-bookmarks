@@ -181,7 +181,7 @@ function App() {
                   </motion.div>
                   <h1 className="text-2xl font-bold font-mono">
                     <GlitchText intensity="high">
-                      AI Combinator
+                      Liminal Feed
                     </GlitchText>
                   </h1>
                 </motion.div>
@@ -218,7 +218,7 @@ function App() {
             <div className="text-center">
               <p className="text-slate-500 font-mono text-sm">
                 <GlitchText intensity="low">
-                  AI Combinator v2.4.7 // Neural Architecture by Agentic Friends
+                  Liminal Feed v2.4.7 // Neural Architecture by Agentic Friends
                 </GlitchText>
               </p>
               <motion.div

@@ -175,56 +175,76 @@ function App() {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
-                  <h1 className="text-xl font-bold font-mono relative overflow-hidden">
-                    <span className="invisible">Liminal {animalNames[currentIconIndex]}</span>
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={currentIconIndex}
-                        className="absolute inset-0 flex items-center"
-                        initial={{ 
-                          y: Math.random() > 0.5 ? 50 : -50,
-                          x: Math.random() * 100 - 50,
-                          rotate: Math.random() * 90 - 45,
-                          scale: 0,
-                          opacity: 0,
-                          filter: "blur(10px)"
-                        }}
-                        animate={{ 
-                          y: 0,
-                          x: 0,
-                          rotate: 0,
-                          scale: 1,
-                          opacity: 1,
-                          filter: "blur(0px)"
-                        }}
-                        exit={{ 
-                          y: Math.random() > 0.5 ? -50 : 50,
-                          x: Math.random() * 100 - 50,
-                          rotate: Math.random() * 90 - 45,
-                          scale: 0,
-                          opacity: 0,
-                          filter: "blur(10px)"
-                        }}
-                        transition={{
-                          duration: 0.8,
-                          ease: [0.43, 0.13, 0.23, 0.96],
-                          scale: {
-                            type: "spring",
-                            damping: 12,
-                            stiffness: 100,
-                          },
-                          rotate: {
-                            type: "spring",
-                            damping: 15,
-                            stiffness: 80,
-                          }
-                        }}
-                      >
-                        <GlitchText intensity="high">
-                          Liminal {animalNames[currentIconIndex]}
-                        </GlitchText>
-                      </motion.div>
-                    </AnimatePresence>
+                  <h1 className="text-xl font-bold font-mono flex items-center gap-1">
+                    <span>Liminal</span>
+                    <div className="relative overflow-hidden">
+                      <span className="invisible">{animalNames[currentIconIndex]}</span>
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={currentIconIndex}
+                          className="absolute inset-0 flex items-center"
+                          initial={{ 
+                            opacity: 0,
+                            x: -10,
+                            filter: "blur(8px)",
+                          }}
+                          animate={{ 
+                            opacity: [0, 1, 1, 0.8, 1],
+                            x: [10, -2, 1, -1, 0],
+                            filter: ["blur(8px)", "blur(0px)", "blur(2px)", "blur(0px)", "blur(0px)"],
+                          }}
+                          exit={{ 
+                            opacity: 0,
+                            x: 10,
+                            filter: "blur(8px)",
+                          }}
+                          transition={{
+                            duration: 0.4,
+                            times: [0, 0.2, 0.5, 0.8, 1],
+                            ease: "easeInOut",
+                          }}
+                        >
+                          <motion.span
+                            animate={{
+                              x: [0, -1, 1, -0.5, 0],
+                              y: [0, 0.5, -0.5, 0.25, 0],
+                            }}
+                            transition={{
+                              duration: 0.15,
+                              repeat: 2,
+                              repeatType: "reverse",
+                            }}
+                          >
+                            <GlitchText intensity="high">
+                              {animalNames[currentIconIndex]}
+                            </GlitchText>
+                          </motion.span>
+                          {/* Glitch layers */}
+                          <motion.span
+                            className="absolute inset-0 text-cyan-400 mix-blend-screen"
+                            initial={{ opacity: 0 }}
+                            animate={{ 
+                              opacity: [0, 0.7, 0],
+                              x: [-2, 2, -1],
+                            }}
+                            transition={{ duration: 0.2, delay: 0.1 }}
+                          >
+                            {animalNames[currentIconIndex]}
+                          </motion.span>
+                          <motion.span
+                            className="absolute inset-0 text-red-400 mix-blend-screen"
+                            initial={{ opacity: 0 }}
+                            animate={{ 
+                              opacity: [0, 0.5, 0],
+                              x: [2, -2, 1],
+                            }}
+                            transition={{ duration: 0.2, delay: 0.15 }}
+                          >
+                            {animalNames[currentIconIndex]}
+                          </motion.span>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
                   </h1>
                 </motion.div>
               </div>

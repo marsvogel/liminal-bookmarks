@@ -199,12 +199,11 @@ function App() {
                           {animalNames[currentIconIndex]}
                           <motion.span
                             className="inline-block w-2 h-5 bg-cyan-400 ml-0.5"
-                            animate={{ opacity: [1, 0] }}
+                            animate={{ opacity: [1, 1, 0, 0] }}
                             transition={{
-                              duration: 0.5,
+                              duration: 1,
                               repeat: Infinity,
-                              repeatType: "reverse",
-                              ease: "steps(2)"
+                              times: [0, 0.5, 0.5, 1]
                             }}
                           />
                         </motion.span>

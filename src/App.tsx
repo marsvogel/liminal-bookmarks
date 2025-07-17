@@ -35,9 +35,11 @@ function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Random icon rotation effect
+  // Random icon rotation effect with erratic timing
   useEffect(() => {
-    const interval = setInterval(() => {
+    let timeoutId: NodeJS.Timeout;
+    
+    const changeIcon = () => {
       setCurrentIconIndex((prevIndex) => {
         const newIndex = Math.floor(Math.random() * animalIcons.length);
         // Ensure we don't get the same icon twice in a row
@@ -45,9 +47,16 @@ function App() {
           ? (newIndex + 1) % animalIcons.length 
           : newIndex;
       });
-    }, 3000); // Change icon every 3 seconds
+      
+      // Random interval between 1.5 and 6 seconds
+      const nextInterval = Math.random() * 4500 + 1500;
+      timeoutId = setTimeout(changeIcon, nextInterval);
+    };
+    
+    // Start with initial change
+    timeoutId = setTimeout(changeIcon, 2000);
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(timeoutId);
   }, [animalIcons.length]);
 
   const headerVariants = {
@@ -107,10 +116,36 @@ function App() {
                 >
                   <motion.div
                     key={currentIconIndex}
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    exit={{ scale: 0, rotate: 180 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    initial={{ 
+                      scale: 0, 
+                      rotate: Math.random() > 0.5 ? -360 : 360,
+                      opacity: 0,
+                      x: Math.random() * 40 - 20,
+                      y: Math.random() * 40 - 20,
+                    }}
+                    animate={{ 
+                      scale: 1, 
+                      rotate: 0,
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                    }}
+                    exit={{ 
+                      scale: 0, 
+                      rotate: Math.random() > 0.5 ? 270 : -270,
+                      opacity: 0,
+                      x: Math.random() * 40 - 20,
+                      y: Math.random() * 40 - 20,
+                    }}
+                    transition={{ 
+                      duration: 0.6 + Math.random() * 0.4,
+                      ease: [0.68, -0.25, 0.265, 1.25], // Erratic but smooth bezier curve
+                      scale: {
+                        type: "spring",
+                        damping: 15,
+                        stiffness: 200,
+                      }
+                    }}
                   >
                     {React.createElement(animalIcons[currentIconIndex], {
                       className: "w-8 h-8 text-cyan-400",

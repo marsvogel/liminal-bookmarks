@@ -157,7 +157,7 @@ function App() {
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-6 py-12">
           {/* News Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-max">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsData.map((news, index) => (
               <motion.div
                 key={news.id}

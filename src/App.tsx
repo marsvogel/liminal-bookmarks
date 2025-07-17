@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { 
   Terminal, Cat, Dog, Rabbit, Bird, Fish, 
-  Turtle, Squirrel, Bug, Snail, Rat
+  Turtle, Squirrel, Bug, Snail, Rat,
+  Coffee, Pizza, Apple, Cherry, Grape, Carrot, Cookie, IceCream,
+  Tree, Flower, Leaf, Mountain, Waves, Palmtree, Trees, Sprout,
+  Sun, Cloud, CloudRain, Snowflake, Wind, CloudSnow, Rainbow, Zap
 } from 'lucide-react';
 import { NewsCard } from './components/NewsCard';
 import { ScanLines } from './components/ScanLines';
@@ -22,15 +25,31 @@ function App() {
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
   
-  // Animal icons array with names
-  const animalIcons = [
-    Terminal, Cat, Dog, Rabbit, Bird, Fish, 
-    Turtle, Squirrel, Bug, Snail, Rat
+  // All icons array with names
+  const allIcons = [
+    // Default
+    Terminal,
+    // Animals
+    Cat, Dog, Rabbit, Bird, Fish, Turtle, Squirrel, Bug, Snail, Rat,
+    // Food & Beverage
+    Coffee, Pizza, Apple, Cherry, Grape, Carrot, Cookie, IceCream,
+    // Nature
+    Tree, Flower, Leaf, Mountain, Waves, Palmtree, Trees, Sprout,
+    // Weather
+    Sun, Cloud, CloudRain, Snowflake, Wind, CloudSnow, Rainbow, Zap
   ];
   
-  const animalNames = [
-    'Bookmarks', 'Cats', 'Dogs', 'Rabbits', 'Birds', 'Fish',
-    'Turtles', 'Squirrels', 'Bugs', 'Snails', 'Rats'
+  const allNames = [
+    // Default
+    'Bookmarks',
+    // Animals
+    'Cats', 'Dogs', 'Rabbits', 'Birds', 'Fish', 'Turtles', 'Squirrels', 'Bugs', 'Snails', 'Rats',
+    // Food & Beverage
+    'Coffee', 'Pizza', 'Apples', 'Cherries', 'Grapes', 'Carrots', 'Cookies', 'IceCream',
+    // Nature
+    'Trees', 'Flowers', 'Leaves', 'Mountains', 'Waves', 'Palms', 'Forest', 'Sprouts',
+    // Weather
+    'Sun', 'Clouds', 'Rain', 'Snow', 'Wind', 'Blizzard', 'Rainbows', 'Lightning'
   ];
 
   useEffect(() => {
@@ -48,10 +67,10 @@ function App() {
     
     const changeIcon = () => {
       setCurrentIconIndex((prevIndex) => {
-        const newIndex = Math.floor(Math.random() * animalIcons.length);
+        const newIndex = Math.floor(Math.random() * allIcons.length);
         // Ensure we don't get the same icon twice in a row
         return newIndex === prevIndex 
-          ? (newIndex + 1) % animalIcons.length 
+          ? (newIndex + 1) % allIcons.length 
           : newIndex;
       });
       
@@ -64,7 +83,7 @@ function App() {
     timeoutId = setTimeout(changeIcon, 2000);
 
     return () => clearTimeout(timeoutId);
-  }, [animalIcons.length]);
+  }, [allIcons.length]);
 
   // Set simple black square favicon once
   useEffect(() => {
@@ -83,8 +102,8 @@ function App() {
   
   // Update page title when icon changes
   useEffect(() => {
-    document.title = `Liminal ${animalNames[currentIconIndex]}`;
-  }, [currentIconIndex, animalNames]);
+    document.title = `Liminal ${allNames[currentIconIndex]}`;
+  }, [currentIconIndex, allNames]);
 
   const headerVariants = {
     initial: { opacity: 0, y: -50 },
@@ -173,7 +192,7 @@ function App() {
                       }
                     }}
                   >
-                    {React.createElement(animalIcons[currentIconIndex], {
+                    {React.createElement(allIcons[currentIconIndex], {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
@@ -190,12 +209,12 @@ function App() {
                           width: 0,
                         }}
                         transition={{
-                          width: { duration: animalNames[currentIconIndex].length * 0.05 },
+                          width: { duration: allNames[currentIconIndex].length * 0.05 },
                           opacity: { duration: 0.2 },
                         }}
                         style={{ overflow: "hidden", whiteSpace: "nowrap" }}
                       >
-                        {animalNames[currentIconIndex]}
+                        {allNames[currentIconIndex]}
                         <motion.span
                           className="inline-block w-2 h-5 bg-cyan-400 ml-0.5"
                           animate={{ opacity: [1, 1, 0, 0] }}
@@ -239,7 +258,7 @@ function App() {
             <div className="text-center">
               <p className="text-slate-500 font-mono text-sm">
                 <GlitchText intensity="low">
-                  Liminal {animalNames[currentIconIndex]} v2.4.7 // Neural Architecture by Agentic Friends
+                  Liminal {allNames[currentIconIndex]} v2.4.7 // Neural Architecture by Agentic Friends
                 </GlitchText>
               </p>
               <motion.div

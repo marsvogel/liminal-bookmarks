@@ -133,14 +133,13 @@ function App() {
       <div className="relative z-20">
         {/* Header */}
         <motion.header
-          className="relative overflow-hidden border-b border-slate-800/50 backdrop-blur-sm"
+          className="relative"
           variants={headerVariants}
           initial="initial"
           animate="animate"
           style={{ y: y1 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/20 via-slate-800/10 to-slate-900/20" />
-          <div className="relative max-w-7xl mx-auto px-6 py-8">
+          <div className="max-w-7xl mx-auto px-6 py-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <motion.div

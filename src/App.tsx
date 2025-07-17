@@ -157,35 +157,9 @@ function App() {
                     </GlitchText>
                   </h1>
                 </motion.div>
-                
-                <motion.div
-                  className="hidden md:flex items-center gap-1 px-3 py-1 bg-green-400/10 border border-green-400/30 rounded-full"
-                  animate={{
-                    opacity: [0.7, 1, 0.7],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                >
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  <span className="text-xs font-mono text-green-400">LIVE</span>
-                </motion.div>
               </div>
 
             </div>
-
-            <motion.div
-              className="mt-6"
-              style={{ y: y2 }}
-            >
-              <p className="text-slate-300 font-light max-w-2xl">
-                <span className="text-sm text-slate-500 font-mono">
-                  // Where technology meets the uncanny valley
-                </span>
-              </p>
-            </motion.div>
           </div>
         </motion.header>
 

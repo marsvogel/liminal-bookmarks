@@ -175,12 +175,12 @@ function App() {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
-                  <h1 className="text-xl font-bold font-mono">
-                    <span>Liminal </span>
+                  <h1 className="text-xl font-bold font-mono flex items-baseline">
+                    <span>Liminal&nbsp;</span>
                     <AnimatePresence mode="wait">
                       <motion.span
                         key={currentIconIndex}
-                        className="inline-block"
+                        className="inline-flex items-baseline"
                         initial={{ width: 0 }}
                         animate={{ width: "auto" }}
                         exit={{ 
@@ -195,7 +195,7 @@ function App() {
                       >
                         {animalNames[currentIconIndex]}
                         <motion.span
-                          className="inline-block w-2 h-5 bg-cyan-400 ml-0.5 align-middle"
+                          className="inline-block w-2 h-5 bg-cyan-400 ml-0.5"
                           animate={{ opacity: [1, 1, 0, 0] }}
                           transition={{
                             duration: 1,

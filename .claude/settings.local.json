@@ -11,7 +11,11 @@
       "Bash(git checkout:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(git remote set-url:*)"
+      "Bash(git remote set-url:*)",
+      "WebFetch(domain:www.reddit.com)",
+      "WebFetch(domain:ajmoon.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }

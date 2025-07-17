@@ -81,7 +81,7 @@ function App() {
     if (faviconEl) {
       // Create SVG favicon dynamically with dark background
       const svgFavicon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-        <rect width="24" height="24" fill="%230f172a" rx="4"/>
+        <rect width="24" height="24" fill="%231e293b" rx="4"/>
         <g fill="none" stroke="%2300ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           ${currentIconPath}
         </g>

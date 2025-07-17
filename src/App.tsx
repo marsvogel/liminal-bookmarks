@@ -20,10 +20,15 @@ function App() {
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
   
-  // Animal icons array
+  // Animal icons array with names
   const animalIcons = [
     Terminal, Cat, Dog, Rabbit, Bird, Fish, 
     Turtle, Squirrel, Bug, Snail, Rat
+  ];
+  
+  const animalNames = [
+    'Bookmarks', 'Cats', 'Dogs', 'Rabbits', 'Birds', 'Fish',
+    'Turtles', 'Squirrels', 'Bugs', 'Snails', 'Rats'
   ];
 
   useEffect(() => {
@@ -73,6 +78,11 @@ function App() {
       faviconEl.href = `data:image/svg+xml,${encodedSvg}`;
     }
   }, []);
+  
+  // Update page title when icon changes
+  useEffect(() => {
+    document.title = `Liminal ${animalNames[currentIconIndex]}`;
+  }, [currentIconIndex, animalNames]);
 
   const headerVariants = {
     initial: { opacity: 0, y: -50 },
@@ -167,7 +177,7 @@ function App() {
                   </motion.div>
                   <h1 className="text-xl font-bold font-mono">
                     <GlitchText intensity="high">
-                      Liminal Bookmarks
+                      Liminal {animalNames[currentIconIndex]}
                     </GlitchText>
                   </h1>
                 </motion.div>
@@ -204,7 +214,7 @@ function App() {
             <div className="text-center">
               <p className="text-slate-500 font-mono text-sm">
                 <GlitchText intensity="low">
-                  Liminal Bookmarks v2.4.7 // Neural Architecture by Agentic Friends
+                  Liminal {animalNames[currentIconIndex]} v2.4.7 // Neural Architecture by Agentic Friends
                 </GlitchText>
               </p>
               <motion.div

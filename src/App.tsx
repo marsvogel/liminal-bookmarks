@@ -190,7 +190,7 @@ function App() {
             <div className="text-center">
               <p className="text-slate-500 font-mono text-sm">
                 <GlitchText intensity="low">
-                  AI Combinator v2.4.7 // Neural Architecture by Uncanny Systems
+                  AI Combinator v2.4.7 // Neural Architecture by Agentic Friends
                 </GlitchText>
               </p>
               <motion.div

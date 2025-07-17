@@ -18,6 +18,7 @@ import './styles/masonry.css';
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
   const { scrollY } = useScroll();
   const masonryRef = useMasonry({ mobile: 1, tablet: 2, desktop: 3 }, 24);
   
@@ -74,16 +75,18 @@ function App() {
           : newIndex;
       });
       
-      // Random interval between 1.5 and 6 seconds
-      const nextInterval = Math.random() * 4500 + 1500;
+      // Random interval - halved when hovering
+      const baseInterval = Math.random() * 4500 + 1500;
+      const nextInterval = isHovering ? baseInterval / 2 : baseInterval;
       timeoutId = setTimeout(changeIcon, nextInterval);
     };
     
     // Start with initial change
-    timeoutId = setTimeout(changeIcon, 2000);
+    const initialDelay = isHovering ? 1000 : 2000;
+    timeoutId = setTimeout(changeIcon, initialDelay);
 
     return () => clearTimeout(timeoutId);
-  }, [allIcons.length]);
+  }, [allIcons.length, isHovering]);
 
   // Set simple black square favicon once
   useEffect(() => {
@@ -158,6 +161,8 @@ function App() {
                 <motion.div
                   className="flex items-center gap-2"
                   whileHover={{ scale: 1.05 }}
+                  onHoverStart={() => setIsHovering(true)}
+                  onHoverEnd={() => setIsHovering(false)}
                 >
                   <motion.div
                     key={currentIconIndex}
@@ -183,12 +188,12 @@ function App() {
                       y: Math.random() * 40 - 20,
                     }}
                     transition={{ 
-                      duration: 0.6 + Math.random() * 0.4,
+                      duration: isHovering ? (0.6 + Math.random() * 0.4) / 2 : 0.6 + Math.random() * 0.4,
                       ease: [0.68, -0.25, 0.265, 1.25], // Erratic but smooth bezier curve
                       scale: {
                         type: "spring",
-                        damping: 15,
-                        stiffness: 200,
+                        damping: isHovering ? 20 : 15,
+                        stiffness: isHovering ? 300 : 200,
                       }
                     }}
                   >
@@ -209,8 +214,8 @@ function App() {
                           width: 0,
                         }}
                         transition={{
-                          width: { duration: allNames[currentIconIndex].length * 0.05 },
-                          opacity: { duration: 0.2 },
+                          width: { duration: isHovering ? allNames[currentIconIndex].length * 0.025 : allNames[currentIconIndex].length * 0.05 },
+                          opacity: { duration: isHovering ? 0.1 : 0.2 },
                         }}
                         style={{ overflow: "hidden", whiteSpace: "nowrap" }}
                       >

@@ -1,3 +1,5 @@
+import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit } from 'lucide-react';
+
 export interface NewsItem {
   id: string;
   title: string;
@@ -6,6 +8,7 @@ export interface NewsItem {
   date: string;
   category: string;
   link: string;
+  icon?: LucideIcon;
 }
 
 export const newsData: NewsItem[] = [
@@ -20,7 +23,8 @@ export const newsData: NewsItem[] = [
     ],
     date: "2025-07-12",
     category: "AI Philosophy",
-    link: "https://tomrenner.com/posts/llm-inevitabilism/"
+    link: "https://tomrenner.com/posts/llm-inevitabilism/",
+    icon: Infinity
   },
   {
     id: "2",
@@ -33,7 +37,8 @@ export const newsData: NewsItem[] = [
     ],
     date: "2025-07-07",
     category: "AI Impact",
-    link: "https://www.holovaty.com/writing/chatgpt-fake-feature/"
+    link: "https://www.holovaty.com/writing/chatgpt-fake-feature/",
+    icon: Lightbulb
   },
   {
     id: "3",
@@ -46,7 +51,8 @@ export const newsData: NewsItem[] = [
     ],
     date: "2025-07-12",
     category: "Digital Art",
-    link: "https://blog.decryption.net.au/posts/macpaint.html"
+    link: "https://blog.decryption.net.au/posts/macpaint.html",
+    icon: Palette
   },
   {
     id: "4",
@@ -59,7 +65,8 @@ export const newsData: NewsItem[] = [
     ],
     date: "2025-07-14",
     category: "Development Tools",
-    link: "https://kiro.dev/blog/introducing-kiro/"
+    link: "https://kiro.dev/blog/introducing-kiro/",
+    icon: Code2
   },
   {
     id: "5",
@@ -72,6 +79,7 @@ export const newsData: NewsItem[] = [
     ],
     date: "2025-07-10",
     category: "AI Research",
-    link: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+    link: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+    icon: BrainCircuit
   }
 ];

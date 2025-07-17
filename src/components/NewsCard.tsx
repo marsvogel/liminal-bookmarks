@@ -101,6 +101,48 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
           }}
         />
 
+        {/* Icon with glitch effect */}
+        {news.icon && (
+          <motion.div
+            className="absolute top-3 right-3 opacity-20"
+            animate={{
+              x: [0, -2, 3, -1, 0],
+              y: [0, 1, -2, 2, 0],
+              rotate: [0, -5, 3, -2, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              times: [0, 0.2, 0.5, 0.8, 1],
+            }}
+          >
+            <div className="relative">
+              {React.createElement(news.icon, {
+                className: "w-12 h-12 text-cyan-400",
+                strokeWidth: 1,
+              })}
+              <motion.div
+                className="absolute inset-0"
+                animate={{
+                  opacity: [0, 0.3, 0],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatDelay: 2,
+                }}
+              >
+                {React.createElement(news.icon, {
+                  className: "w-12 h-12 text-purple-400 blur-sm",
+                  strokeWidth: 1,
+                })}
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+
         {/* Header */}
         <div className="flex items-start justify-between mb-3">
           <motion.span

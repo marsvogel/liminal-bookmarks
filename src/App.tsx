@@ -13,11 +13,18 @@ import './styles/globals.css';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [currentIconIndex, setCurrentIconIndex] = useState(0);
   const { scrollY } = useScroll();
   
   // Parallax transforms
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
+  
+  // Animal icons array
+  const animalIcons = [
+    Terminal, Cat, Dog, Rabbit, Bird, Fish, 
+    Turtle, Squirrel, Bug, Snail, Rat
+  ];
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -27,6 +34,21 @@ function App() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  // Random icon rotation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIconIndex((prevIndex) => {
+        const newIndex = Math.floor(Math.random() * animalIcons.length);
+        // Ensure we don't get the same icon twice in a row
+        return newIndex === prevIndex 
+          ? (newIndex + 1) % animalIcons.length 
+          : newIndex;
+      });
+    }, 3000); // Change icon every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [animalIcons.length]);
 
   const headerVariants = {
     initial: { opacity: 0, y: -50 },
@@ -83,7 +105,17 @@ function App() {
                   className="flex items-center gap-2"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <Terminal className="w-8 h-8 text-cyan-400" />
+                  <motion.div
+                    key={currentIconIndex}
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    exit={{ scale: 0, rotate: 180 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                  >
+                    {React.createElement(animalIcons[currentIconIndex], {
+                      className: "w-8 h-8 text-cyan-400",
+                    })}
+                  </motion.div>
                   <h1 className="text-2xl font-bold font-mono">
                     <GlitchText intensity="high">
                       AI Combinator

@@ -82,7 +82,7 @@ function App() {
                   <Terminal className="w-8 h-8 text-cyan-400" />
                   <h1 className="text-2xl font-bold font-mono">
                     <GlitchText intensity="high">
-                      TECH_FEED.exe
+                      AI Combinator
                     </GlitchText>
                   </h1>
                 </motion.div>
@@ -103,23 +103,6 @@ function App() {
                 </motion.div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <motion.div
-                  className="flex items-center gap-2 text-sm font-mono text-slate-400"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Cpu className="w-4 h-4 text-purple-400" />
-                  <span>Neural Network Active</span>
-                </motion.div>
-                
-                <motion.div
-                  className="flex items-center gap-2 text-sm font-mono text-slate-400"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Zap className="w-4 h-4 text-yellow-400" />
-                  <span>Real-time Updates</span>
-                </motion.div>
-              </div>
             </div>
 
             <motion.div
@@ -127,10 +110,6 @@ function App() {
               style={{ y: y2 }}
             >
               <p className="text-slate-300 font-light max-w-2xl">
-                <GlitchText intensity="low">
-                  Exploring the liminal space between human and machine intelligence.
-                </GlitchText>
-                <br />
                 <span className="text-sm text-slate-500 font-mono">
                   // Where technology meets the uncanny valley
                 </span>
@@ -166,7 +145,7 @@ function App() {
             <div className="text-center">
               <p className="text-slate-500 font-mono text-sm">
                 <GlitchText intensity="low">
-                  TECH_FEED.exe v2.4.7 // Neural Architecture by Uncanny Systems
+                  AI Combinator v2.4.7 // Neural Architecture by Uncanny Systems
                 </GlitchText>
               </p>
               <motion.div

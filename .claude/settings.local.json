@@ -19,7 +19,12 @@
       "Bash(rm:*)",
       "WebFetch(domain:react.dev)",
       "WebFetch(domain:react.dev)",
-      "WebFetch(domain:modelcontextprotocol.io)"
+      "WebFetch(domain:modelcontextprotocol.io)",
+      "WebFetch(domain:lucide.dev)",
+      "WebFetch(domain:vite.dev)",
+      "WebFetch(domain:reactrouter.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:arxiv.org)"
     ],
     "deny": []
   }

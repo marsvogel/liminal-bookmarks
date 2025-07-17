@@ -190,7 +190,7 @@ function App() {
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 py-6">
           {/* News Masonry Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
             {newsData.map((news, index) => (
               <motion.div
                 key={news.id}

@@ -73,7 +73,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ news, index }) => {
   return (
     <motion.a
       href={news.link}
-      className="relative group"
+      className="relative group block mb-8"
       variants={cardVariants}
       initial="initial"
       animate="animate"

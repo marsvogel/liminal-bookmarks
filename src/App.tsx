@@ -191,12 +191,12 @@ function App() {
 
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-6 py-12">
-          {/* News Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* News Masonry Grid */}
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
             {newsData.map((news, index) => (
               <motion.div
                 key={news.id}
-                className="h-fit"
+                className="break-inside-avoid"
                 style={{
                   y: useTransform(scrollY, [0, 2000], [0, index % 2 === 0 ? -50 : -100]),
                 }}

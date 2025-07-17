@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:tomrenner.com)",
+      "WebFetch(domain:www.holovaty.com)",
+      "WebFetch(domain:blog.decryption.net.au)",
+      "WebFetch(domain:kiro.dev)",
+      "WebFetch(domain:metr.org)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": []
+  }
+}

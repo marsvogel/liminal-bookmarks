@@ -177,68 +177,36 @@ function App() {
                   </motion.div>
                   <h1 className="text-xl font-bold font-mono flex items-center gap-1">
                     <span>Liminal</span>
-                    <div className="relative overflow-hidden">
-                      <span className="invisible">{animalNames[currentIconIndex]}</span>
+                    <div className="relative">
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={currentIconIndex}
-                          className="absolute inset-0 flex items-center"
-                          initial={{ 
-                            filter: "blur(20px) contrast(0.1)",
-                            opacity: 0,
-                            scale: 1.5,
-                          }}
-                          animate={{ 
-                            filter: "blur(0px) contrast(1)",
-                            opacity: 1,
-                            scale: 1,
-                          }}
+                          className="inline-block"
+                          initial={{ width: 0 }}
+                          animate={{ width: "auto" }}
                           exit={{ 
-                            filter: [
-                              "blur(0px) contrast(1)",
-                              "blur(2px) contrast(2) saturate(0)",
-                              "blur(4px) contrast(5) brightness(2)",
-                              "blur(20px) contrast(0.1) brightness(0)"
-                            ],
-                            opacity: [1, 1, 0.8, 0],
-                            scale: [1, 0.98, 0.95, 0.8],
+                            opacity: 0,
+                            width: 0,
+                            marginLeft: -8,
                           }}
                           transition={{
-                            duration: 0.5,
-                            exit: {
-                              duration: 0.3,
-                              times: [0, 0.3, 0.7, 1]
-                            }
+                            width: { duration: animalNames[currentIconIndex].length * 0.05 },
+                            opacity: { duration: 0.2 },
+                            marginLeft: { duration: 0.3 }
                           }}
+                          style={{ overflow: "hidden", whiteSpace: "nowrap" }}
                         >
-                          <span className="relative">
-                            {animalNames[currentIconIndex]}
-                            {/* Exit glitch effect */}
-                            <motion.span
-                              className="absolute inset-0 text-cyan-400 mix-blend-screen"
-                              initial={{ opacity: 0 }}
-                              exit={{ 
-                                opacity: [0, 0.8, 0.4, 0],
-                                x: [-1, 2, -3, 0],
-                                scaleX: [1, 1.1, 0.9, 1],
-                              }}
-                              transition={{ duration: 0.3 }}
-                            >
-                              {animalNames[currentIconIndex]}
-                            </motion.span>
-                            <motion.span
-                              className="absolute inset-0 text-red-400 mix-blend-screen"
-                              initial={{ opacity: 0 }}
-                              exit={{ 
-                                opacity: [0, 0.6, 0.3, 0],
-                                x: [1, -2, 3, 0],
-                                scaleX: [1, 0.9, 1.1, 1],
-                              }}
-                              transition={{ duration: 0.3, delay: 0.05 }}
-                            >
-                              {animalNames[currentIconIndex]}
-                            </motion.span>
-                          </span>
+                          {animalNames[currentIconIndex]}
+                          <motion.span
+                            className="inline-block w-2 h-5 bg-cyan-400 ml-0.5"
+                            animate={{ opacity: [1, 0] }}
+                            transition={{
+                              duration: 0.5,
+                              repeat: Infinity,
+                              repeatType: "reverse",
+                              ease: "steps(2)"
+                            }}
+                          />
                         </motion.span>
                       </AnimatePresence>
                     </div>

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { 
-  Terminal, Star, Heart, 
-  ShoppingCart, ParkingSquare, Sparkles,
-  Car, Guitar, Calendar
+  Terminal, Cat, Dog, Rabbit, Bird, Fish, 
+  Turtle, Squirrel, Bug, Snail, Rat
 } from 'lucide-react';
 import { NewsCard } from './components/NewsCard';
 import { ScanLines } from './components/ScanLines';
@@ -23,15 +22,15 @@ function App() {
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
   
-  // Icons that rhyme with "marks" - array with names
-  const rhymingIcons = [
-    Terminal, Star, Heart, ShoppingCart, ParkingSquare, 
-    Sparkles, Car, Guitar, Calendar
+  // Animal icons array with names
+  const animalIcons = [
+    Terminal, Cat, Dog, Rabbit, Bird, Fish, 
+    Turtle, Squirrel, Bug, Snail, Rat
   ];
   
-  const rhymingNames = [
-    'Bookmarks', 'Starmarks', 'Heartmarks', 'Cartmarks', 'Parkmarks',
-    'Sparkmarks', 'Carmarks', 'Guitarmarks', 'Calendarmarks'
+  const animalNames = [
+    'Bookmarks', 'Cats', 'Dogs', 'Rabbits', 'Birds', 'Fish',
+    'Turtles', 'Squirrels', 'Bugs', 'Snails', 'Rats'
   ];
 
   useEffect(() => {
@@ -49,10 +48,10 @@ function App() {
     
     const changeIcon = () => {
       setCurrentIconIndex((prevIndex) => {
-        const newIndex = Math.floor(Math.random() * rhymingIcons.length);
+        const newIndex = Math.floor(Math.random() * animalIcons.length);
         // Ensure we don't get the same icon twice in a row
         return newIndex === prevIndex 
-          ? (newIndex + 1) % rhymingIcons.length 
+          ? (newIndex + 1) % animalIcons.length 
           : newIndex;
       });
       
@@ -65,7 +64,7 @@ function App() {
     timeoutId = setTimeout(changeIcon, 2000);
 
     return () => clearTimeout(timeoutId);
-  }, [rhymingIcons.length]);
+  }, [animalIcons.length]);
 
   // Set simple black square favicon once
   useEffect(() => {
@@ -84,8 +83,8 @@ function App() {
   
   // Update page title when icon changes
   useEffect(() => {
-    document.title = `Liminal ${rhymingNames[currentIconIndex]}`;
-  }, [currentIconIndex, rhymingNames]);
+    document.title = `Liminal ${animalNames[currentIconIndex]}`;
+  }, [currentIconIndex, animalNames]);
 
   const headerVariants = {
     initial: { opacity: 0, y: -50 },
@@ -174,7 +173,7 @@ function App() {
                       }
                     }}
                   >
-                    {React.createElement(rhymingIcons[currentIconIndex], {
+                    {React.createElement(animalIcons[currentIconIndex], {
                       className: "w-8 h-8 text-cyan-400",
                     })}
                   </motion.div>
@@ -191,12 +190,12 @@ function App() {
                           width: 0,
                         }}
                         transition={{
-                          width: { duration: rhymingNames[currentIconIndex].length * 0.05 },
+                          width: { duration: animalNames[currentIconIndex].length * 0.05 },
                           opacity: { duration: 0.2 },
                         }}
                         style={{ overflow: "hidden", whiteSpace: "nowrap" }}
                       >
-                        {rhymingNames[currentIconIndex]}
+                        {animalNames[currentIconIndex]}
                         <motion.span
                           className="inline-block w-2 h-5 bg-cyan-400 ml-0.5"
                           animate={{ opacity: [1, 1, 0, 0] }}
@@ -240,7 +239,7 @@ function App() {
             <div className="text-center">
               <p className="text-slate-500 font-mono text-sm">
                 <GlitchText intensity="low">
-                  Liminal {rhymingNames[currentIconIndex]} v2.4.7 // Neural Architecture by Agentic Friends
+                  Liminal {animalNames[currentIconIndex]} v2.4.7 // Neural Architecture by Agentic Friends
                 </GlitchText>
               </p>
               <motion.div

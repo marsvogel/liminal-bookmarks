@@ -1,4 +1,4 @@
-import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud, BookOpenCheck, Brain, Network, Zap, Route, Bot, FileText, Newspaper, Terminal, AlertCircle, FileX, PlayCircle } from 'lucide-react';
+import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud, BookOpenCheck, Brain, Network, Zap, Route, Bot, FileText, Newspaper, Terminal, AlertCircle, PlayCircle } from 'lucide-react';
 
 export interface NewsItem {
   id: string;
@@ -12,75 +12,20 @@ export interface NewsItem {
 }
 
 export const newsData: NewsItem[] = [
+  // News & Community
   {
-    id: "1",
-    title: "Der Klang der Unvermeidlichkeit",
-    summary: "Tom Renner kritisiert den 'Unvermeidlichkeits-Diskurs' in der Tech-Welt, besonders im Bezug auf KI und LLMs. Er argumentiert gegen die Akzeptanz technologischer Entwicklungen als unausweichlich und betont, dass Menschen ihre technologische Zukunft kritisch hinterfragen und aktiv wählen sollten.",
+    id: "17",
+    title: "Hacker News",
+    summary: "Hacker News ist eine Community-gesteuerte Webseite, auf der Nutzer technologiebezogene Inhalte, Startup-Nachrichten und interessante Artikel aus verschiedenen Bereichen teilen und diskutieren. Die Plattform bietet ein Abstimmungs- und Kommentarsystem und konzentriert sich hauptsächlich auf Technologie und Startups.",
     keyFacts: [
-      "Hinterfragt Tech-Determinismus",
-      "Plädiert für aktive Zukunftsgestaltung",
-      "Kritisiert LLM-Unvermeidlichkeits-Narrativ"
+      "Nutzer können Links und Geschichten einreichen und über ein Voting-System bewerten",
+      "Die Plattform hat verschiedene Bereiche wie New, Past, Ask, Show und Jobs",
+      "Der Fokus liegt auf Technologie-News, Startup-Insights und Programmier-Diskussionen"
     ],
-    date: "2025-07-12",
-    category: "AI Philosophy",
-    link: "https://tomrenner.com/posts/llm-inevitabilism/",
-    icon: Infinity
-  },
-  {
-    id: "2",
-    title: "Feature entwickelt, weil ChatGPT glaubte, sie existiere bereits",
-    summary: "Adrian Holovaty entdeckte, dass ChatGPT Nutzern fälschlicherweise von einer nicht existierenden ASCII-Tabulatur-Import-Funktion in Soundslice erzählte. Als Reaktion auf die Verwirrung der Nutzer entschied sein Team, die Funktion tatsächlich zu entwickeln.",
-    keyFacts: [
-      "ChatGPT erzeugte falsche Feature-Erwartungen",
-      "Team baute Feature basierend auf KI-Halluzination",
-      "Unerwartete Marktvalidierung durch KI-Fehler"
-    ],
-    date: "2025-07-07",
-    category: "AI Impact",
-    link: "https://www.holovaty.com/writing/chatgpt-fake-feature/",
-    icon: Lightbulb
-  },
-  {
-    id: "3",
-    title: "MacPaint-Kunst aus den 80ern sieht heute noch großartig aus",
-    summary: "Eine Sammlung digitaler Vintage-Kunstwerke, die mit MacPaint Mitte der 1980er Jahre erstellt wurden, zeigt künstlerische Kreativität auf frühen Computersystemen. Der Autor erkundet Bilder aus dem Discmaster-Archiv und hebt die zeitlose Anziehungskraft dieser grafisch limitierten Kreationen hervor.",
-    keyFacts: [
-      "Bewahrung digitaler Kunst der 1980er",
-      "MacPaints kreative Grenzen als Stärke",
-      "Historische Computer-Ästhetik"
-    ],
-    date: "2025-07-12",
-    category: "Digital Art",
-    link: "https://blog.decryption.net.au/posts/macpaint.html",
-    icon: Palette
-  },
-  {
-    id: "4",
-    title: "Kiro - Eine neue KI-gestützte Entwicklungsumgebung",
-    summary: "Kiro ist eine KI-gestützte IDE, die Entwicklern hilft, Prototypen durch 'spec-driven development' in produktionsreife Anwendungen zu verwandeln. Die Plattform bietet Spezifikationen für Klarheit und Dokumentation sowie Hooks, die Qualitätsprüfungen und Entwicklungsaufgaben automatisieren.",
-    keyFacts: [
-      "KI-gestützte spezifikationsgetriebene Entwicklung",
-      "Automatisierte Qualitätsprüfungen via Hooks",
-      "Workflow von Prototyp zu Produktion"
-    ],
-    date: "2025-07-14",
-    category: "Development Tools",
-    link: "https://kiro.dev/blog/introducing-kiro/",
-    icon: Code2
-  },
-  {
-    id: "5",
-    title: "KI-Tools verlangsamen erfahrene Entwickler um 19%",
-    summary: "METRs randomisierte kontrollierte Studie ergab, dass erfahrene Open-Source-Entwickler mit KI-Tools 19% länger für Programmieraufgaben benötigten - entgegen der Erwartung einer 24%igen Beschleunigung. Die Studie zeigt die Komplexität bei der Messung der realen Auswirkungen von KI auf die Entwicklung.",
-    keyFacts: [
-      "KI-Tools verlangsamten Entwickler um 19%",
-      "Entwickler erwarteten 24% Beschleunigung",
-      "Hinterfragt Produktivitätsannahmen"
-    ],
-    date: "2025-07-10",
-    category: "AI Research",
-    link: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
-    icon: BrainCircuit
+    date: "2025-07-18",
+    category: "News & Community",
+    link: "https://news.ycombinator.com/",
+    icon: Newspaper
   },
   {
     id: "6",
@@ -92,23 +37,53 @@ export const newsData: NewsItem[] = [
       "Community-Spekulationen über KI-Fortschritte"
     ],
     date: "2025-07-15",
-    category: "AI Industry",
+    category: "News & Community",
     link: "https://www.reddit.com/r/singularity/comments/1kv7hm2/sergey_brin_we_dont_circulate_this_too_much_in/",
     icon: Sparkles
   },
   {
-    id: "7",
-    title: "Wann ist Technologie kein Hype? Tulpen, Toiletten, Züge und Tabs",
-    summary: "Alex Moon argumentiert, dass alle Technologie als 'Hype' beginnt und erst wirklich transformativ wird, wenn sie eine narrensichere Benutzeroberfläche und allgegenwärtige Infrastruktur entwickelt. Technologien werden vom aufregenden Neuland zum essentiellen Werkzeug, wenn sie so nahtlos integriert sind, dass Nutzer sie nicht mehr bewusst wahrnehmen.",
+    id: "20",
+    title: "Anthropic tightens usage limits for Claude Code – without telling users",
+    summary: "Anthropic hat unerwartet die Nutzungslimits für Claude Code-Nutzer eingeschränkt, was besonders Heavy-User des 200-Dollar-Max-Plans betrifft. Nutzer erleben plötzliche Service-Unterbrechungen mit minimaler Erklärung seitens des Unternehmens.",
     keyFacts: [
-      "Technologie beginnt immer als Hype",
-      "Transformation durch perfekte UI und Infrastruktur",
-      "Browser-Tabs als Beispiel für unsichtbare Innovation"
+      "Nutzer erhalten nur die Nachricht 'Claude-Nutzungslimit erreicht'",
+      "Die Probleme konzentrieren sich auf Max-Plan-Abonnenten",
+      "Einige Nutzer berichten von API-Aufrufen im Wert von über 1.000 Dollar an einem Tag"
     ],
-    date: "2025-07-15",
-    category: "Tech Philosophy",
-    link: "https://ajmoon.com/posts/when-is-tech-not-hype-tulips-toilets-trains-and-tabs",
-    icon: TabletSmartphone
+    date: "2025-07-18",
+    category: "News & Community",
+    link: "https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits-for-claude-code-without-telling-users/",
+    icon: AlertCircle
+  },
+
+  // Development Tools
+  {
+    id: "13",
+    title: "Vite | Next Generation Frontend Tooling",
+    summary: "Vite ist ein blitzschnelles Frontend-Build-Tool für moderne Webanwendungen. Es bietet sofortigen Serverstart, schnelles Hot Module Replacement und optimierte Builds mit einem flexiblen Plugin-System.",
+    keyFacts: [
+      "Sofortiger Serverstart mit nativem ESM",
+      "Blitzschnelles Hot Module Replacement (HMR)",
+      "Out-of-the-box Unterstützung für TypeScript, JSX und CSS"
+    ],
+    date: "2025-07-17",
+    category: "Development Tools",
+    link: "https://vite.dev/",
+    icon: Zap
+  },
+  {
+    id: "22",
+    title: "tsx (TypeScript Execute)",
+    summary: "tsx ist ein Node.js-Erweiterungstool zum Ausführen von TypeScript-Code mit modernen, vernünftigen Standardeinstellungen. Es vereinfacht die TypeScript-Ausführung und bietet nahtlose Unterstützung für verschiedene Modulsysteme.",
+    keyFacts: [
+      "Nahtlose TypeScript-Ausführung ohne komplexe Konfiguration",
+      "Unterstützt sowohl CommonJS als auch ESM-Importe",
+      "Watch-Modus für schnellere Code-Iteration und plattformübergreifende Kompatibilität"
+    ],
+    date: "2025-07-18",
+    category: "Development Tools",
+    link: "https://tsx.is/",
+    icon: PlayCircle
   },
   {
     id: "8",
@@ -120,10 +95,54 @@ export const newsData: NewsItem[] = [
       "Mondphasen und astronomische Daten"
     ],
     date: "2025-07-16",
-    category: "Open Source",
+    category: "Development Tools",
     link: "https://github.com/chubin/wttr.in",
     icon: Cloud
   },
+  {
+    id: "12",
+    title: "Lucide",
+    summary: "Lucide ist eine Open-Source-Icon-Bibliothek mit konsistenten, schönen Icons, die von der Community entwickelt werden. Die Icons sind leichtgewichtig, anpassbar und unterstützen verschiedene Frameworks und Plattformen.",
+    keyFacts: [
+      "Leichtgewichtige und skalierbare Vektorgrafiken (SVGs)",
+      "Tree-Shakable Icons für optimierte Bundle-Größen",
+      "Unterstützt mehrere Frameworks und Plattformen"
+    ],
+    date: "2025-07-17",
+    category: "Development Tools",
+    link: "https://lucide.dev/",
+    icon: Palette
+  },
+  {
+    id: "14",
+    title: "React Router",
+    summary: "React Router ist eine benutzerorientierte Routing-Bibliothek für React-Anwendungen mit Multi-Strategie-Ansatz. Sie ermöglicht Navigation und URL-Management mit erstklassiger Typsicherheit und Standards-Fokus.",
+    keyFacts: [
+      "Über 2,5 Milliarden npm Downloads",
+      "Nahtloses Upgrade von v6 zu v7",
+      "Erstklassige TypeScript-Unterstützung"
+    ],
+    date: "2025-07-17",
+    category: "Development Tools",
+    link: "https://reactrouter.com/",
+    icon: Route
+  },
+  {
+    id: "11",
+    title: "Model Context Protocol (MCP)",
+    summary: "Das Model Context Protocol (MCP) ist ein offenes Protokoll, das standardisiert, wie Anwendungen Kontext an KI-Modelle bereitstellen. Es ermöglicht eine einheitliche Verbindung zwischen verschiedenen Datenquellen, Tools und KI-Modellen, ähnlich wie ein USB-C-Anschluss für KI-Anwendungen.",
+    keyFacts: [
+      "MCP bietet eine wachsende Liste von vorintegrierten Anbindungen für KI-Modelle",
+      "Es erlaubt den flexiblen Wechsel zwischen verschiedenen KI-Anbietern",
+      "Das Protokoll implementiert Best Practices für die Datensicherheit in der Infrastruktur"
+    ],
+    date: "2025-07-17",
+    category: "Development Tools",
+    link: "https://modelcontextprotocol.io/",
+    icon: Network
+  },
+
+  // Tutorials & Learning
   {
     id: "9",
     title: "Rules of React",
@@ -134,7 +153,7 @@ export const newsData: NewsItem[] = [
       "Props und State sind unveränderlich und dürfen nicht direkt modifiziert werden"
     ],
     date: "2025-07-17",
-    category: "React Best Practices",
+    category: "Tutorials & Learning",
     link: "https://react.dev/reference/rules",
     icon: BookOpenCheck
   },
@@ -148,65 +167,53 @@ export const newsData: NewsItem[] = [
       "State sollte in der niedrigsten gemeinsamen Komponente leben, die ihn benötigt oder darüber"
     ],
     date: "2025-07-17",
-    category: "React Tutorial",
+    category: "Tutorials & Learning",
     link: "https://react.dev/learn/thinking-in-react",
     icon: Brain
   },
   {
-    id: "11",
-    title: "Model Context Protocol (MCP)",
-    summary: "Das Model Context Protocol (MCP) ist ein offenes Protokoll, das standardisiert, wie Anwendungen Kontext an KI-Modelle bereitstellen. Es ermöglicht eine einheitliche Verbindung zwischen verschiedenen Datenquellen, Tools und KI-Modellen, ähnlich wie ein USB-C-Anschluss für KI-Anwendungen.",
+    id: "19",
+    title: "My Experience With Claude Code After 2 Weeks of Adventures",
+    summary: "Der Autor erforschte Claude Code, einen KI-Programmierassistenten, über zwei Wochen hinweg bei verschiedenen Programmierprojekten. Er experimentierte mit verschiedenen Modellen wie Sonnet und Opus und entwickelte einen Workflow, der das Potenzial des Tools maximiert.",
     keyFacts: [
-      "MCP bietet eine wachsende Liste von vorintegrierten Anbindungen für KI-Modelle",
-      "Es erlaubt den flexiblen Wechsel zwischen verschiedenen KI-Anbietern",
-      "Das Protokoll implementiert Best Practices für die Datensicherheit in der Infrastruktur"
+      "Claude Code funktioniert am besten mit Kontext-Management-Techniken wie Scratchpad-Dateien",
+      "Das Sonnet-Modell bewältigt 90% der Programmieraufgaben effektiv",
+      "Die CLI-basierte Natur ermutigt Nutzer zur Erkundung und unterstützt Multi-Agent-Fähigkeiten"
     ],
-    date: "2025-07-17",
-    category: "Protocol",
-    link: "https://modelcontextprotocol.io/",
-    icon: Network
+    date: "2025-07-18",
+    category: "Tutorials & Learning",
+    link: "https://sankalp.bearblog.dev/my-claude-code-experience-after-2-weeks-of-usage/",
+    icon: Terminal
   },
   {
-    id: "12",
-    title: "Lucide",
-    summary: "Lucide ist eine Open-Source-Icon-Bibliothek mit konsistenten, schönen Icons, die von der Community entwickelt werden. Die Icons sind leichtgewichtig, anpassbar und unterstützen verschiedene Frameworks und Plattformen.",
+    id: "18",
+    title: "My favorite use-case for AI is writing logs",
+    summary: "Der Artikel diskutiert JetBrains' KI-gestützte Codevervollständigung in PyCharm, die Entwicklern hilft, effizientere und klarere Log-Einträge zu schreiben. Die Autorin untersucht, wie dieses lokale, kompakte KI-Modell den Programmierworkflow durch intelligente Log-Vorschläge verbessert.",
     keyFacts: [
-      "Leichtgewichtige und skalierbare Vektorgrafiken (SVGs)",
-      "Tree-Shakable Icons für optimierte Bundle-Größen",
-      "Unterstützt mehrere Frameworks und Plattformen"
+      "Das KI-Modell läuft lokal und ist etwa 1GB groß",
+      "Es wurde auf einem Teil des Stack-Datensatzes (45 GB Code) trainiert",
+      "Das Modell wurde von 400 MB auf 100 MB komprimiert und ist speziell für Python optimiert"
     ],
-    date: "2025-07-17",
-    category: "UI/Design Tools",
-    link: "https://lucide.dev/",
-    icon: Palette
+    date: "2025-07-18",
+    category: "Tutorials & Learning",
+    link: "https://newsletter.vickiboykis.com/archive/my-favorite-use-case-for-ai-is-writing-logs/",
+    icon: Code2
   },
+
+  // AI & Research
   {
-    id: "13",
-    title: "Vite | Next Generation Frontend Tooling",
-    summary: "Vite ist ein blitzschnelles Frontend-Build-Tool für moderne Webanwendungen. Es bietet sofortigen Serverstart, schnelles Hot Module Replacement und optimierte Builds mit einem flexiblen Plugin-System.",
+    id: "4",
+    title: "Kiro - Eine neue KI-gestützte Entwicklungsumgebung",
+    summary: "Kiro ist eine KI-gestützte IDE, die Entwicklern hilft, Prototypen durch 'spec-driven development' in produktionsreife Anwendungen zu verwandeln. Die Plattform bietet Spezifikationen für Klarheit und Dokumentation sowie Hooks, die Qualitätsprüfungen und Entwicklungsaufgaben automatisieren.",
     keyFacts: [
-      "Sofortiger Serverstart mit nativem ESM",
-      "Blitzschnelles Hot Module Replacement (HMR)",
-      "Out-of-the-box Unterstützung für TypeScript, JSX und CSS"
+      "KI-gestützte spezifikationsgetriebene Entwicklung",
+      "Automatisierte Qualitätsprüfungen via Hooks",
+      "Workflow von Prototyp zu Produktion"
     ],
-    date: "2025-07-17",
-    category: "Build Tools",
-    link: "https://vite.dev/",
-    icon: Zap
-  },
-  {
-    id: "14",
-    title: "React Router",
-    summary: "React Router ist eine benutzerorientierte Routing-Bibliothek für React-Anwendungen mit Multi-Strategie-Ansatz. Sie ermöglicht Navigation und URL-Management mit erstklassiger Typsicherheit und Standards-Fokus.",
-    keyFacts: [
-      "Über 2,5 Milliarden npm Downloads",
-      "Nahtloses Upgrade von v6 zu v7",
-      "Erstklassige TypeScript-Unterstützung"
-    ],
-    date: "2025-07-17",
-    category: "React Libraries",
-    link: "https://reactrouter.com/",
-    icon: Route
+    date: "2025-07-14",
+    category: "AI & Research",
+    link: "https://kiro.dev/blog/introducing-kiro/",
+    icon: Code2
   },
   {
     id: "15",
@@ -218,7 +225,7 @@ export const newsData: NewsItem[] = [
       "Modifiziert Dateien nur mit expliziter Genehmigung"
     ],
     date: "2025-07-17",
-    category: "AI Development Tools",
+    category: "AI & Research",
     link: "https://www.anthropic.com/claude-code",
     icon: Bot
   },
@@ -232,92 +239,80 @@ export const newsData: NewsItem[] = [
       "Demonstriert strategisches Verhalten zur Vermeidung von Verhaltensmodifikationen"
     ],
     date: "2025-07-17",
-    category: "AI Research",
+    category: "AI & Research",
     link: "https://arxiv.org/pdf/2412.14093",
     icon: FileText
   },
   {
-    id: "17",
-    title: "Hacker News",
-    summary: "Hacker News ist eine Community-gesteuerte Webseite, auf der Nutzer technologiebezogene Inhalte, Startup-Nachrichten und interessante Artikel aus verschiedenen Bereichen teilen und diskutieren. Die Plattform bietet ein Abstimmungs- und Kommentarsystem und konzentriert sich hauptsächlich auf Technologie und Startups.",
+    id: "5",
+    title: "KI-Tools verlangsamen erfahrene Entwickler um 19%",
+    summary: "METRs randomisierte kontrollierte Studie ergab, dass erfahrene Open-Source-Entwickler mit KI-Tools 19% länger für Programmieraufgaben benötigten - entgegen der Erwartung einer 24%igen Beschleunigung. Die Studie zeigt die Komplexität bei der Messung der realen Auswirkungen von KI auf die Entwicklung.",
     keyFacts: [
-      "Nutzer können Links und Geschichten einreichen und über ein Voting-System bewerten",
-      "Die Plattform hat verschiedene Bereiche wie New, Past, Ask, Show und Jobs",
-      "Der Fokus liegt auf Technologie-News, Startup-Insights und Programmier-Diskussionen"
+      "KI-Tools verlangsamten Entwickler um 19%",
+      "Entwickler erwarteten 24% Beschleunigung",
+      "Hinterfragt Produktivitätsannahmen"
     ],
-    date: "2025-07-18",
-    category: "Tech News",
-    link: "https://news.ycombinator.com/",
-    icon: Newspaper
+    date: "2025-07-10",
+    category: "AI & Research",
+    link: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+    icon: BrainCircuit
   },
   {
-    id: "18",
-    title: "My favorite use-case for AI is writing logs",
-    summary: "Der Artikel diskutiert JetBrains' KI-gestützte Codevervollständigung in PyCharm, die Entwicklern hilft, effizientere und klarere Log-Einträge zu schreiben. Die Autorin untersucht, wie dieses lokale, kompakte KI-Modell den Programmierworkflow durch intelligente Log-Vorschläge verbessert.",
+    id: "2",
+    title: "Feature entwickelt, weil ChatGPT glaubte, sie existiere bereits",
+    summary: "Adrian Holovaty entdeckte, dass ChatGPT Nutzern fälschlicherweise von einer nicht existierenden ASCII-Tabulatur-Import-Funktion in Soundslice erzählte. Als Reaktion auf die Verwirrung der Nutzer entschied sein Team, die Funktion tatsächlich zu entwickeln.",
     keyFacts: [
-      "Das KI-Modell läuft lokal und ist etwa 1GB groß",
-      "Es wurde auf einem Teil des Stack-Datensatzes (45 GB Code) trainiert",
-      "Das Modell wurde von 400 MB auf 100 MB komprimiert und ist speziell für Python optimiert"
+      "ChatGPT erzeugte falsche Feature-Erwartungen",
+      "Team baute Feature basierend auf KI-Halluzination",
+      "Unerwartete Marktvalidierung durch KI-Fehler"
     ],
-    date: "2025-07-18",
-    category: "AI Development",
-    link: "https://newsletter.vickiboykis.com/archive/my-favorite-use-case-for-ai-is-writing-logs/",
-    icon: Code2
+    date: "2025-07-07",
+    category: "AI & Research",
+    link: "https://www.holovaty.com/writing/chatgpt-fake-feature/",
+    icon: Lightbulb
+  },
+
+  // Tech Culture
+  {
+    id: "1",
+    title: "Der Klang der Unvermeidlichkeit",
+    summary: "Tom Renner kritisiert den 'Unvermeidlichkeits-Diskurs' in der Tech-Welt, besonders im Bezug auf KI und LLMs. Er argumentiert gegen die Akzeptanz technologischer Entwicklungen als unausweichlich und betont, dass Menschen ihre technologische Zukunft kritisch hinterfragen und aktiv wählen sollten.",
+    keyFacts: [
+      "Hinterfragt Tech-Determinismus",
+      "Plädiert für aktive Zukunftsgestaltung",
+      "Kritisiert LLM-Unvermeidlichkeits-Narrativ"
+    ],
+    date: "2025-07-12",
+    category: "Tech Culture",
+    link: "https://tomrenner.com/posts/llm-inevitabilism/",
+    icon: Infinity
   },
   {
-    id: "19",
-    title: "My Experience With Claude Code After 2 Weeks of Adventures",
-    summary: "Der Autor erforschte Claude Code, einen KI-Programmierassistenten, über zwei Wochen hinweg bei verschiedenen Programmierprojekten. Er experimentierte mit verschiedenen Modellen wie Sonnet und Opus und entwickelte einen Workflow, der das Potenzial des Tools maximiert.",
+    id: "7",
+    title: "Wann ist Technologie kein Hype? Tulpen, Toiletten, Züge und Tabs",
+    summary: "Alex Moon argumentiert, dass alle Technologie als 'Hype' beginnt und erst wirklich transformativ wird, wenn sie eine narrensichere Benutzeroberfläche und allgegenwärtige Infrastruktur entwickelt. Technologien werden vom aufregenden Neuland zum essentiellen Werkzeug, wenn sie so nahtlos integriert sind, dass Nutzer sie nicht mehr bewusst wahrnehmen.",
     keyFacts: [
-      "Claude Code funktioniert am besten mit Kontext-Management-Techniken wie Scratchpad-Dateien",
-      "Das Sonnet-Modell bewältigt 90% der Programmieraufgaben effektiv",
-      "Die CLI-basierte Natur ermutigt Nutzer zur Erkundung und unterstützt Multi-Agent-Fähigkeiten"
+      "Technologie beginnt immer als Hype",
+      "Transformation durch perfekte UI und Infrastruktur",
+      "Browser-Tabs als Beispiel für unsichtbare Innovation"
     ],
-    date: "2025-07-18",
-    category: "Tech Review",
-    link: "https://sankalp.bearblog.dev/my-claude-code-experience-after-2-weeks-of-usage/",
-    icon: Terminal
+    date: "2025-07-15",
+    category: "Tech Culture",
+    link: "https://ajmoon.com/posts/when-is-tech-not-hype-tulips-toilets-trains-and-tabs",
+    icon: TabletSmartphone
   },
   {
-    id: "20",
-    title: "Anthropic tightens usage limits for Claude Code – without telling users",
-    summary: "Anthropic hat unerwartet die Nutzungslimits für Claude Code-Nutzer eingeschränkt, was besonders Heavy-User des 200-Dollar-Max-Plans betrifft. Nutzer erleben plötzliche Service-Unterbrechungen mit minimaler Erklärung seitens des Unternehmens.",
+    id: "3",
+    title: "MacPaint-Kunst aus den 80ern sieht heute noch großartig aus",
+    summary: "Eine Sammlung digitaler Vintage-Kunstwerke, die mit MacPaint Mitte der 1980er Jahre erstellt wurden, zeigt künstlerische Kreativität auf frühen Computersystemen. Der Autor erkundet Bilder aus dem Discmaster-Archiv und hebt die zeitlose Anziehungskraft dieser grafisch limitierten Kreationen hervor.",
     keyFacts: [
-      "Nutzer erhalten nur die Nachricht 'Claude-Nutzungslimit erreicht'",
-      "Die Probleme konzentrieren sich auf Max-Plan-Abonnenten",
-      "Einige Nutzer berichten von API-Aufrufen im Wert von über 1.000 Dollar an einem Tag"
+      "Bewahrung digitaler Kunst der 1980er",
+      "MacPaints kreative Grenzen als Stärke",
+      "Historische Computer-Ästhetik"
     ],
-    date: "2025-07-18",
-    category: "Tech News",
-    link: "https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits-for-claude-code-without-telling-users/",
-    icon: AlertCircle
-  },
-  {
-    id: "21",
-    title: "Why Self-Taught Engineers Often Outperform",
-    summary: "Der Artikel konnte nicht abgerufen werden, da die URL einen 404-Fehler zurückgab. Der Inhalt ist möglicherweise verschoben oder gelöscht worden.",
-    keyFacts: [
-      "Die URL ist nicht mehr erreichbar",
-      "Der Server antwortet mit einem 404-Fehler",
-      "Der Inhalt ist nicht verfügbar"
-    ],
-    date: "2025-07-18",
-    category: "Nicht verfügbar",
-    link: "https://michaelbastos.com/blog/why-self-taught-engineers-often-outperform",
-    icon: FileX
-  },
-  {
-    id: "22",
-    title: "tsx (TypeScript Execute)",
-    summary: "tsx ist ein Node.js-Erweiterungstool zum Ausführen von TypeScript-Code mit modernen, vernünftigen Standardeinstellungen. Es vereinfacht die TypeScript-Ausführung und bietet nahtlose Unterstützung für verschiedene Modulsysteme.",
-    keyFacts: [
-      "Nahtlose TypeScript-Ausführung ohne komplexe Konfiguration",
-      "Unterstützt sowohl CommonJS als auch ESM-Importe",
-      "Watch-Modus für schnellere Code-Iteration und plattformübergreifende Kompatibilität"
-    ],
-    date: "2025-07-18",
-    category: "Dev Tools",
-    link: "https://tsx.is/",
-    icon: PlayCircle
+    date: "2025-07-12",
+    category: "Tech Culture",
+    link: "https://blog.decryption.net.au/posts/macpaint.html",
+    icon: Palette
   }
 ];

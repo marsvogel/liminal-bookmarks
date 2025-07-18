@@ -1,4 +1,4 @@
-import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud, BookOpenCheck, Brain, Network, Zap, Route, Bot, FileText } from 'lucide-react';
+import { LucideIcon, Infinity, Lightbulb, Palette, Code2, BrainCircuit, Sparkles, TabletSmartphone, Cloud, BookOpenCheck, Brain, Network, Zap, Route, Bot, FileText, Newspaper, Terminal, AlertCircle, FileX, PlayCircle } from 'lucide-react';
 
 export interface NewsItem {
   id: string;
@@ -235,5 +235,89 @@ export const newsData: NewsItem[] = [
     category: "AI Research",
     link: "https://arxiv.org/pdf/2412.14093",
     icon: FileText
+  },
+  {
+    id: "17",
+    title: "Hacker News",
+    summary: "Hacker News ist eine Community-gesteuerte Webseite, auf der Nutzer technologiebezogene Inhalte, Startup-Nachrichten und interessante Artikel aus verschiedenen Bereichen teilen und diskutieren. Die Plattform bietet ein Abstimmungs- und Kommentarsystem und konzentriert sich hauptsächlich auf Technologie und Startups.",
+    keyFacts: [
+      "Nutzer können Links und Geschichten einreichen und über ein Voting-System bewerten",
+      "Die Plattform hat verschiedene Bereiche wie New, Past, Ask, Show und Jobs",
+      "Der Fokus liegt auf Technologie-News, Startup-Insights und Programmier-Diskussionen"
+    ],
+    date: "2025-07-18",
+    category: "Tech News",
+    link: "https://news.ycombinator.com/",
+    icon: Newspaper
+  },
+  {
+    id: "18",
+    title: "My favorite use-case for AI is writing logs",
+    summary: "Der Artikel diskutiert JetBrains' KI-gestützte Codevervollständigung in PyCharm, die Entwicklern hilft, effizientere und klarere Log-Einträge zu schreiben. Die Autorin untersucht, wie dieses lokale, kompakte KI-Modell den Programmierworkflow durch intelligente Log-Vorschläge verbessert.",
+    keyFacts: [
+      "Das KI-Modell läuft lokal und ist etwa 1GB groß",
+      "Es wurde auf einem Teil des Stack-Datensatzes (45 GB Code) trainiert",
+      "Das Modell wurde von 400 MB auf 100 MB komprimiert und ist speziell für Python optimiert"
+    ],
+    date: "2025-07-18",
+    category: "AI Development",
+    link: "https://newsletter.vickiboykis.com/archive/my-favorite-use-case-for-ai-is-writing-logs/",
+    icon: Code2
+  },
+  {
+    id: "19",
+    title: "My Experience With Claude Code After 2 Weeks of Adventures",
+    summary: "Der Autor erforschte Claude Code, einen KI-Programmierassistenten, über zwei Wochen hinweg bei verschiedenen Programmierprojekten. Er experimentierte mit verschiedenen Modellen wie Sonnet und Opus und entwickelte einen Workflow, der das Potenzial des Tools maximiert.",
+    keyFacts: [
+      "Claude Code funktioniert am besten mit Kontext-Management-Techniken wie Scratchpad-Dateien",
+      "Das Sonnet-Modell bewältigt 90% der Programmieraufgaben effektiv",
+      "Die CLI-basierte Natur ermutigt Nutzer zur Erkundung und unterstützt Multi-Agent-Fähigkeiten"
+    ],
+    date: "2025-07-18",
+    category: "Tech Review",
+    link: "https://sankalp.bearblog.dev/my-claude-code-experience-after-2-weeks-of-usage/",
+    icon: Terminal
+  },
+  {
+    id: "20",
+    title: "Anthropic tightens usage limits for Claude Code – without telling users",
+    summary: "Anthropic hat unerwartet die Nutzungslimits für Claude Code-Nutzer eingeschränkt, was besonders Heavy-User des 200-Dollar-Max-Plans betrifft. Nutzer erleben plötzliche Service-Unterbrechungen mit minimaler Erklärung seitens des Unternehmens.",
+    keyFacts: [
+      "Nutzer erhalten nur die Nachricht 'Claude-Nutzungslimit erreicht'",
+      "Die Probleme konzentrieren sich auf Max-Plan-Abonnenten",
+      "Einige Nutzer berichten von API-Aufrufen im Wert von über 1.000 Dollar an einem Tag"
+    ],
+    date: "2025-07-18",
+    category: "Tech News",
+    link: "https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits-for-claude-code-without-telling-users/",
+    icon: AlertCircle
+  },
+  {
+    id: "21",
+    title: "Why Self-Taught Engineers Often Outperform",
+    summary: "Der Artikel konnte nicht abgerufen werden, da die URL einen 404-Fehler zurückgab. Der Inhalt ist möglicherweise verschoben oder gelöscht worden.",
+    keyFacts: [
+      "Die URL ist nicht mehr erreichbar",
+      "Der Server antwortet mit einem 404-Fehler",
+      "Der Inhalt ist nicht verfügbar"
+    ],
+    date: "2025-07-18",
+    category: "Nicht verfügbar",
+    link: "https://michaelbastos.com/blog/why-self-taught-engineers-often-outperform",
+    icon: FileX
+  },
+  {
+    id: "22",
+    title: "tsx (TypeScript Execute)",
+    summary: "tsx ist ein Node.js-Erweiterungstool zum Ausführen von TypeScript-Code mit modernen, vernünftigen Standardeinstellungen. Es vereinfacht die TypeScript-Ausführung und bietet nahtlose Unterstützung für verschiedene Modulsysteme.",
+    keyFacts: [
+      "Nahtlose TypeScript-Ausführung ohne komplexe Konfiguration",
+      "Unterstützt sowohl CommonJS als auch ESM-Importe",
+      "Watch-Modus für schnellere Code-Iteration und plattformübergreifende Kompatibilität"
+    ],
+    date: "2025-07-18",
+    category: "Dev Tools",
+    link: "https://tsx.is/",
+    icon: PlayCircle
   }
 ];

@@ -24,7 +24,13 @@
       "WebFetch(domain:vite.dev)",
       "WebFetch(domain:reactrouter.com)",
       "WebFetch(domain:www.anthropic.com)",
-      "WebFetch(domain:arxiv.org)"
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:news.ycombinator.com)",
+      "WebFetch(domain:newsletter.vickiboykis.com)",
+      "WebFetch(domain:sankalp.bearblog.dev)",
+      "WebFetch(domain:techcrunch.com)",
+      "WebFetch(domain:michaelbastos.com)",
+      "WebFetch(domain:tsx.is)"
     ],
     "deny": []
   }

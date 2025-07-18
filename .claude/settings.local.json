@@ -30,7 +30,10 @@
       "WebFetch(domain:sankalp.bearblog.dev)",
       "WebFetch(domain:techcrunch.com)",
       "WebFetch(domain:michaelbastos.com)",
-      "WebFetch(domain:tsx.is)"
+      "WebFetch(domain:tsx.is)",
+      "Bash(git config:*)",
+      "Bash(git log:*)",
+      "Bash(git filter-branch:*)"
     ],
     "deny": []
   }

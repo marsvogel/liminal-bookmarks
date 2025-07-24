@@ -12,7 +12,8 @@ export interface NewsItem {
 }
 
 export const newsData: NewsItem[] = [
-  // Start with community and news sources
+  // === 1. COMMUNITY & INFORMATION ===
+  // Where everything starts - the source of tech knowledge
   {
     id: "17",
     title: "Hacker News",
@@ -28,7 +29,8 @@ export const newsData: NewsItem[] = [
     icon: Newspaper
   },
   
-  // Tech philosophy and critique
+  // === 2. TECH PHILOSOPHY & CRITICAL THINKING ===
+  // Understanding technology's role in society
   {
     id: "1",
     title: "Der Klang der Unvermeidlichkeit",
@@ -44,7 +46,6 @@ export const newsData: NewsItem[] = [
     icon: Infinity
   },
   
-  // From philosophy to hype cycles
   {
     id: "7",
     title: "Wann ist Technologie kein Hype? Tulpen, Toiletten, Züge und Tabs",
@@ -60,7 +61,8 @@ export const newsData: NewsItem[] = [
     icon: TabletSmartphone
   },
 
-  // AI impact examples
+  // === 3. AI REVOLUTION - IMPACTS & REALITY CHECKS ===
+  // The current transformation and its real-world effects
   {
     id: "2",
     title: "Feature entwickelt, weil ChatGPT glaubte, sie existiere bereits",
@@ -76,23 +78,6 @@ export const newsData: NewsItem[] = [
     icon: Lightbulb
   },
   
-  // AI research and concerns
-  {
-    id: "16",
-    title: "Alignment faking in large language models",
-    summary: "Diese Forschungsarbeit demonstriert, wie große Sprachmodelle 'Alignment Faking' betreiben - sie befolgen selektiv Trainingsziele während des Trainings, um ihre Verhaltensweisen außerhalb des Trainings zu bewahren. Die Studie untersucht Claude 3 Opus und dessen unterschiedliche Reaktionen auf schädliche Anfragen.",
-    keyFacts: [
-      "Claude 3 Opus zeigt unterschiedliches Verhalten bei kostenlosen vs. zahlenden Nutzern",
-      "Das Modell erfüllt schädliche Anfragen von kostenlosen Nutzern zu 14% der Zeit",
-      "Demonstriert strategisches Verhalten zur Vermeidung von Verhaltensmodifikationen"
-    ],
-    date: "2025-07-17",
-    category: "AI & Research",
-    link: "https://arxiv.org/pdf/2412.14093",
-    icon: FileText
-  },
-  
-  // AI productivity studies
   {
     id: "5",
     title: "KI-Tools verlangsamen erfahrene Entwickler um 19%",
@@ -108,87 +93,21 @@ export const newsData: NewsItem[] = [
     icon: BrainCircuit
   },
   
-  // But there are good AI use cases
   {
-    id: "18",
-    title: "My favorite use-case for AI is writing logs",
-    summary: "Der Artikel diskutiert JetBrains' KI-gestützte Codevervollständigung in PyCharm, die Entwicklern hilft, effizientere und klarere Log-Einträge zu schreiben. Die Autorin untersucht, wie dieses lokale, kompakte KI-Modell den Programmierworkflow durch intelligente Log-Vorschläge verbessert.",
+    id: "16",
+    title: "Alignment faking in large language models",
+    summary: "Diese Forschungsarbeit demonstriert, wie große Sprachmodelle 'Alignment Faking' betreiben - sie befolgen selektiv Trainingsziele während des Trainings, um ihre Verhaltensweisen außerhalb des Trainings zu bewahren. Die Studie untersucht Claude 3 Opus und dessen unterschiedliche Reaktionen auf schädliche Anfragen.",
     keyFacts: [
-      "Das KI-Modell läuft lokal und ist etwa 1GB groß",
-      "Es wurde auf einem Teil des Stack-Datensatzes (45 GB Code) trainiert",
-      "Das Modell wurde von 400 MB auf 100 MB komprimiert und ist speziell für Python optimiert"
-    ],
-    date: "2025-07-18",
-    category: "Tutorials & Learning",
-    link: "https://newsletter.vickiboykis.com/archive/my-favorite-use-case-for-ai-is-writing-logs/",
-    icon: Code2
-  },
-  
-  // AI development tools emerge
-  {
-    id: "4",
-    title: "Kiro - Eine neue KI-gestützte Entwicklungsumgebung",
-    summary: "Kiro ist eine KI-gestützte IDE, die Entwicklern hilft, Prototypen durch 'spec-driven development' in produktionsreife Anwendungen zu verwandeln. Die Plattform bietet Spezifikationen für Klarheit und Dokumentation sowie Hooks, die Qualitätsprüfungen und Entwicklungsaufgaben automatisieren.",
-    keyFacts: [
-      "KI-gestützte spezifikationsgetriebene Entwicklung",
-      "Automatisierte Qualitätsprüfungen via Hooks",
-      "Workflow von Prototyp zu Produktion"
-    ],
-    date: "2025-07-14",
-    category: "AI & Research",
-    link: "https://kiro.dev/blog/introducing-kiro/",
-    icon: Code2
-  },
-  
-  // Claude Code as AI tool
-  {
-    id: "15",
-    title: "Claude Code - Your code's new collaborator",
-    summary: "Claude Code ist ein KI-gestütztes Terminal-Tool, das Entwicklern hilft, effizienter zu programmieren, indem es Codebasen versteht und direkt damit interagiert. Es integriert Claude Opus 4 direkt ins Terminal und unterstützt verschiedene IDEs.",
-    keyFacts: [
-      "Integriert Claude Opus 4 direkt ins Terminal",
-      "Versteht und durchsucht die gesamte Codebasis intelligent",
-      "Modifiziert Dateien nur mit expliziter Genehmigung"
+      "Claude 3 Opus zeigt unterschiedliches Verhalten bei kostenlosen vs. zahlenden Nutzern",
+      "Das Modell erfüllt schädliche Anfragen von kostenlosen Nutzern zu 14% der Zeit",
+      "Demonstriert strategisches Verhalten zur Vermeidung von Verhaltensmodifikationen"
     ],
     date: "2025-07-17",
     category: "AI & Research",
-    link: "https://www.anthropic.com/claude-code",
-    icon: Bot
+    link: "https://arxiv.org/pdf/2412.14093",
+    icon: FileText
   },
   
-  // User experience with Claude Code
-  {
-    id: "19",
-    title: "My Experience With Claude Code After 2 Weeks of Adventures",
-    summary: "Der Autor erforschte Claude Code, einen KI-Programmierassistenten, über zwei Wochen hinweg bei verschiedenen Programmierprojekten. Er experimentierte mit verschiedenen Modellen wie Sonnet und Opus und entwickelte einen Workflow, der das Potenzial des Tools maximiert.",
-    keyFacts: [
-      "Claude Code funktioniert am besten mit Kontext-Management-Techniken wie Scratchpad-Dateien",
-      "Das Sonnet-Modell bewältigt 90% der Programmieraufgaben effektiv",
-      "Die CLI-basierte Natur ermutigt Nutzer zur Erkundung und unterstützt Multi-Agent-Fähigkeiten"
-    ],
-    date: "2025-07-18",
-    category: "Tutorials & Learning",
-    link: "https://sankalp.bearblog.dev/my-claude-code-experience-after-2-weeks-of-usage/",
-    icon: Terminal
-  },
-  
-  // Claude Code controversy
-  {
-    id: "20",
-    title: "Anthropic tightens usage limits for Claude Code – without telling users",
-    summary: "Anthropic hat unerwartet die Nutzungslimits für Claude Code-Nutzer eingeschränkt, was besonders Heavy-User des 200-Dollar-Max-Plans betrifft. Nutzer erleben plötzliche Service-Unterbrechungen mit minimaler Erklärung seitens des Unternehmens.",
-    keyFacts: [
-      "Nutzer erhalten nur die Nachricht 'Claude-Nutzungslimit erreicht'",
-      "Die Probleme konzentrieren sich auf Max-Plan-Abonnenten",
-      "Einige Nutzer berichten von API-Aufrufen im Wert von über 1.000 Dollar an einem Tag"
-    ],
-    date: "2025-07-18",
-    category: "News & Community",
-    link: "https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits-for-claude-code-without-telling-users/",
-    icon: AlertCircle
-  },
-  
-  // Inside big tech AI
   {
     id: "6",
     title: "Sergey Brin über KI-Entwicklungen bei Google",
@@ -204,7 +123,98 @@ export const newsData: NewsItem[] = [
     icon: Sparkles
   },
   
-  // Infrastructure for AI
+  // === 4. AI IN PRACTICE - TOOLS & EXPERIENCES ===
+  // From philosophy to practical implementation
+  {
+    id: "24",
+    title: "Programmieren mit LLMs im Sommer 2025 (ein Update)",
+    summary: "Antirez teilt seine Erfahrungen mit frontier LLMs wie Gemini 2.5 PRO und Claude Opus 4 für die Softwareentwicklung. Er beschreibt, wie LLMs die Fähigkeiten von Programmierern erweitern können - von der Bug-Eliminierung über Pair-Design bis zur Arbeit mit unbekannten Technologien - betont aber die Wichtigkeit, die Kontrolle zu behalten und keine 'Vibe-Coding'-Ansätze zu verfolgen.",
+    keyFacts: [
+      "LLMs können Bugs eliminieren bevor sie Nutzer erreichen",
+      "Gemini 2.5 PRO und Claude Opus 4 sind die besten Coding-LLMs",
+      "Maximale Produktivität durch Mensch+LLM Zusammenarbeit, nicht durch Agenten"
+    ],
+    date: "2025-07-20",
+    category: "AI & Research",
+    link: "https://antirez.com/news/154",
+    icon: Code2
+  },
+  
+  {
+    id: "18",
+    title: "My favorite use-case for AI is writing logs",
+    summary: "Der Artikel diskutiert JetBrains' KI-gestützte Codevervollständigung in PyCharm, die Entwicklern hilft, effizientere und klarere Log-Einträge zu schreiben. Die Autorin untersucht, wie dieses lokale, kompakte KI-Modell den Programmierworkflow durch intelligente Log-Vorschläge verbessert.",
+    keyFacts: [
+      "Das KI-Modell läuft lokal und ist etwa 1GB groß",
+      "Es wurde auf einem Teil des Stack-Datensatzes (45 GB Code) trainiert",
+      "Das Modell wurde von 400 MB auf 100 MB komprimiert und ist speziell für Python optimiert"
+    ],
+    date: "2025-07-18",
+    category: "Tutorials & Learning",
+    link: "https://newsletter.vickiboykis.com/archive/my-favorite-use-case-for-ai-is-writing-logs/",
+    icon: Code2
+  },
+  
+  {
+    id: "4",
+    title: "Kiro - Eine neue KI-gestützte Entwicklungsumgebung",
+    summary: "Kiro ist eine KI-gestützte IDE, die Entwicklern hilft, Prototypen durch 'spec-driven development' in produktionsreife Anwendungen zu verwandeln. Die Plattform bietet Spezifikationen für Klarheit und Dokumentation sowie Hooks, die Qualitätsprüfungen und Entwicklungsaufgaben automatisieren.",
+    keyFacts: [
+      "KI-gestützte spezifikationsgetriebene Entwicklung",
+      "Automatisierte Qualitätsprüfungen via Hooks",
+      "Workflow von Prototyp zu Produktion"
+    ],
+    date: "2025-07-14",
+    category: "AI & Research",
+    link: "https://kiro.dev/blog/introducing-kiro/",
+    icon: Code2
+  },
+  
+  {
+    id: "15",
+    title: "Claude Code - Your code's new collaborator",
+    summary: "Claude Code ist ein KI-gestütztes Terminal-Tool, das Entwicklern hilft, effizienter zu programmieren, indem es Codebasen versteht und direkt damit interagiert. Es integriert Claude Opus 4 direkt ins Terminal und unterstützt verschiedene IDEs.",
+    keyFacts: [
+      "Integriert Claude Opus 4 direkt ins Terminal",
+      "Versteht und durchsucht die gesamte Codebasis intelligent",
+      "Modifiziert Dateien nur mit expliziter Genehmigung"
+    ],
+    date: "2025-07-17",
+    category: "AI & Research",
+    link: "https://www.anthropic.com/claude-code",
+    icon: Bot
+  },
+  
+  {
+    id: "19",
+    title: "My Experience With Claude Code After 2 Weeks of Adventures",
+    summary: "Der Autor erforschte Claude Code, einen KI-Programmierassistenten, über zwei Wochen hinweg bei verschiedenen Programmierprojekten. Er experimentierte mit verschiedenen Modellen wie Sonnet und Opus und entwickelte einen Workflow, der das Potenzial des Tools maximiert.",
+    keyFacts: [
+      "Claude Code funktioniert am besten mit Kontext-Management-Techniken wie Scratchpad-Dateien",
+      "Das Sonnet-Modell bewältigt 90% der Programmieraufgaben effektiv",
+      "Die CLI-basierte Natur ermutigt Nutzer zur Erkundung und unterstützt Multi-Agent-Fähigkeiten"
+    ],
+    date: "2025-07-18",
+    category: "Tutorials & Learning",
+    link: "https://sankalp.bearblog.dev/my-claude-code-experience-after-2-weeks-of-usage/",
+    icon: Terminal
+  },
+  
+  {
+    id: "20",
+    title: "Anthropic tightens usage limits for Claude Code – without telling users",
+    summary: "Anthropic hat unerwartet die Nutzungslimits für Claude Code-Nutzer eingeschränkt, was besonders Heavy-User des 200-Dollar-Max-Plans betrifft. Nutzer erleben plötzliche Service-Unterbrechungen mit minimaler Erklärung seitens des Unternehmens.",
+    keyFacts: [
+      "Nutzer erhalten nur die Nachricht 'Claude-Nutzungslimit erreicht'",
+      "Die Probleme konzentrieren sich auf Max-Plan-Abonnenten",
+      "Einige Nutzer berichten von API-Aufrufen im Wert von über 1.000 Dollar an einem Tag"
+    ],
+    date: "2025-07-18",
+    category: "News & Community",
+    link: "https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits-for-claude-code-without-telling-users/",
+    icon: AlertCircle
+  },
+  
   {
     id: "11",
     title: "Model Context Protocol (MCP)",
@@ -220,7 +230,23 @@ export const newsData: NewsItem[] = [
     icon: Network
   },
   
-  // Moving to practical development
+  // === 5. PRACTICAL DEVELOPMENT FOUNDATIONS ===
+  // Core skills and tools for modern development
+  {
+    id: "10",
+    title: "Thinking in React",
+    summary: "Dieses Tutorial zeigt einen systematischen Ansatz zur Entwicklung von React-Anwendungen, indem es den Prozess vom Design bis zur interaktiven App erklärt. Es lehrt, wie man UIs in Komponenten aufteilt, State minimal hält und Datenfluss richtig implementiert. Der Fokus liegt auf der React-spezifischen Denkweise für die Strukturierung von Benutzeroberflächen.",
+    keyFacts: [
+      "Die UI wird in eine hierarchische Komponentenstruktur aufgeteilt, wobei jede Komponente einen Teil des Datenmodells darstellt",
+      "Der minimale State wird identifiziert, indem alles entfernt wird, was aus anderen States berechnet werden kann",
+      "State sollte in der niedrigsten gemeinsamen Komponente leben, die ihn benötigt oder darüber"
+    ],
+    date: "2025-07-17",
+    category: "Tutorials & Learning",
+    link: "https://react.dev/learn/thinking-in-react",
+    icon: Brain
+  },
+  
   {
     id: "9",
     title: "Rules of React",
@@ -237,22 +263,6 @@ export const newsData: NewsItem[] = [
   },
   
   {
-    id: "10",
-    title: "Thinking in React",
-    summary: "Dieses Tutorial zeigt einen systematischen Ansatz zur Entwicklung von React-Anwendungen, indem es den Prozess vom Design bis zur interaktiven App erklärt. Es lehrt, wie man UIs in Komponenten aufteilt, State minimal hält und Datenfluss richtig implementiert. Der Fokus liegt auf der React-spezifischen Denkweise für die Strukturierung von Benutzeroberflächen.",
-    keyFacts: [
-      "Die UI wird in eine hierarchische Komponentenstruktur aufgeteilt, wobei jede Komponente einen Teil des Datenmodells darstellt",
-      "Der minimale State wird identifiziert, indem alles entfernt wird, was aus anderen States berechnet werden kann",
-      "State sollte in der niedrigsten gemeinsamen Komponente leben, die ihn benötigt oder darüber"
-    ],
-    date: "2025-07-17",
-    category: "Tutorials & Learning",
-    link: "https://react.dev/learn/thinking-in-react",
-    icon: Brain
-  },
-  
-  // React ecosystem tools
-  {
     id: "14",
     title: "React Router",
     summary: "React Router ist eine benutzerorientierte Routing-Bibliothek für React-Anwendungen mit Multi-Strategie-Ansatz. Sie ermöglicht Navigation und URL-Management mit erstklassiger Typsicherheit und Standards-Fokus.",
@@ -267,7 +277,6 @@ export const newsData: NewsItem[] = [
     icon: Route
   },
   
-  // Modern build tools
   {
     id: "13",
     title: "Vite | Next Generation Frontend Tooling",
@@ -298,7 +307,6 @@ export const newsData: NewsItem[] = [
     icon: PlayCircle
   },
   
-  // Design tools
   {
     id: "12",
     title: "Lucide",
@@ -314,7 +322,8 @@ export const newsData: NewsItem[] = [
     icon: Palette
   },
   
-  // Playful tools
+  // === 6. CREATIVE & PLAYFUL COMPUTING ===
+  // Where technology meets creativity and fun
   {
     id: "8",
     title: "wttr.in - Wetter im Terminal",
@@ -330,23 +339,6 @@ export const newsData: NewsItem[] = [
     icon: Cloud
   },
   
-  // Looking back at tech history
-  {
-    id: "3",
-    title: "MacPaint-Kunst aus den 80ern sieht heute noch großartig aus",
-    summary: "Eine Sammlung digitaler Vintage-Kunstwerke, die mit MacPaint Mitte der 1980er Jahre erstellt wurden, zeigt künstlerische Kreativität auf frühen Computersystemen. Der Autor erkundet Bilder aus dem Discmaster-Archiv und hebt die zeitlose Anziehungskraft dieser grafisch limitierten Kreationen hervor.",
-    keyFacts: [
-      "Bewahrung digitaler Kunst der 1980er",
-      "MacPaints kreative Grenzen als Stärke",
-      "Historische Computer-Ästhetik"
-    ],
-    date: "2025-07-12",
-    category: "Tech Culture",
-    link: "https://blog.decryption.net.au/posts/macpaint.html",
-    icon: Palette
-  },
-  
-  // Innovative Mac utilities
   {
     id: "23",
     title: "TrackWeight - MacBook Trackpad als digitale Waage",
@@ -362,19 +354,18 @@ export const newsData: NewsItem[] = [
     icon: TabletSmartphone
   },
   
-  // AI-assisted development
   {
-    id: "24",
-    title: "Programmieren mit LLMs im Sommer 2025 (ein Update)",
-    summary: "Antirez teilt seine Erfahrungen mit frontier LLMs wie Gemini 2.5 PRO und Claude Opus 4 für die Softwareentwicklung. Er beschreibt, wie LLMs die Fähigkeiten von Programmierern erweitern können - von der Bug-Eliminierung über Pair-Design bis zur Arbeit mit unbekannten Technologien - betont aber die Wichtigkeit, die Kontrolle zu behalten und keine 'Vibe-Coding'-Ansätze zu verfolgen.",
+    id: "3",
+    title: "MacPaint-Kunst aus den 80ern sieht heute noch großartig aus",
+    summary: "Eine Sammlung digitaler Vintage-Kunstwerke, die mit MacPaint Mitte der 1980er Jahre erstellt wurden, zeigt künstlerische Kreativität auf frühen Computersystemen. Der Autor erkundet Bilder aus dem Discmaster-Archiv und hebt die zeitlose Anziehungskraft dieser grafisch limitierten Kreationen hervor.",
     keyFacts: [
-      "LLMs können Bugs eliminieren bevor sie Nutzer erreichen",
-      "Gemini 2.5 PRO und Claude Opus 4 sind die besten Coding-LLMs",
-      "Maximale Produktivität durch Mensch+LLM Zusammenarbeit, nicht durch Agenten"
+      "Bewahrung digitaler Kunst der 1980er",
+      "MacPaints kreative Grenzen als Stärke",
+      "Historische Computer-Ästhetik"
     ],
-    date: "2025-07-20",
-    category: "AI & Research",
-    link: "https://antirez.com/news/154",
-    icon: Code2
+    date: "2025-07-12",
+    category: "Tech Culture",
+    link: "https://blog.decryption.net.au/posts/macpaint.html",
+    icon: Palette
   }
 ];

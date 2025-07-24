@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useMemo } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Terminal, Cat, Dog, Rabbit, Bird, Fish, 
   Turtle, Squirrel, Bug, Snail, Rat,
@@ -24,7 +24,6 @@ function App() {
   
   // Parallax transforms
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
-  const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
   
   // All icons array with names
   const allIcons = [
@@ -40,7 +39,7 @@ function App() {
     Sun, Cloud, CloudRain, Snowflake, Wind, CloudSnow, Rainbow, Zap
   ];
   
-  const allNames = [
+  const allNames = useMemo(() => [
     // Default
     'Bookmarks',
     // Animals
@@ -50,8 +49,8 @@ function App() {
     // Nature
     'Trees', 'Flowers', 'Leaves', 'Mountains', 'Waves', 'Palms', 'Forest', 'Sprouts',
     // Weather
-    'Sun', 'Clouds', 'Rain', 'Snow', 'Wind', 'Blizzard', 'Rainbows', 'Lightning'
-  ];
+    'Sun', 'Clouds', 'Rain', 'Snow', 'Blizzard', 'Rainbows', 'Lightning'
+  ], []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -64,7 +63,7 @@ function App() {
 
   // Random icon rotation effect with erratic timing
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
     
     const changeIcon = () => {
       setCurrentIconIndex((prevIndex) => {
@@ -108,14 +107,14 @@ function App() {
     document.title = `Liminal ${allNames[currentIconIndex]}`;
   }, [currentIconIndex, allNames]);
 
-  const headerVariants = {
+  const headerVariants: Variants = {
     initial: { opacity: 0, y: -50 },
     animate: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 1,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       }
     }
   };

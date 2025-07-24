@@ -344,5 +344,37 @@ export const newsData: NewsItem[] = [
     category: "Tech Culture",
     link: "https://blog.decryption.net.au/posts/macpaint.html",
     icon: Palette
+  },
+  
+  // Innovative Mac utilities
+  {
+    id: "23",
+    title: "TrackWeight - MacBook Trackpad als digitale Waage",
+    summary: "TrackWeight verwandelt das MacBook-Trackpad in eine präzise digitale Waage, indem es die Force Touch-Drucksensoren moderner MacBook-Trackpads nutzt. Die App verwendet die Open Multi-Touch Support Library für detaillierte Touch-Daten und kann Gewichte in Gramm messen, solange ein Finger Kontakt zum Trackpad hält.",
+    keyFacts: [
+      "Nutzt Force Touch-Sensoren für Gewichtsmessungen in Gramm",
+      "Erfordert Fingerkontakt während der Messung für Kapazitätserkennung",
+      "Open Source mit über 4.3k Stars auf GitHub"
+    ],
+    date: "2025-07-23",
+    category: "Development Tools",
+    link: "https://github.com/KrishKrosh/TrackWeight",
+    icon: TabletSmartphone
+  },
+  
+  // AI-assisted development
+  {
+    id: "24",
+    title: "Programmieren mit LLMs im Sommer 2025 (ein Update)",
+    summary: "Antirez teilt seine Erfahrungen mit frontier LLMs wie Gemini 2.5 PRO und Claude Opus 4 für die Softwareentwicklung. Er beschreibt, wie LLMs die Fähigkeiten von Programmierern erweitern können - von der Bug-Eliminierung über Pair-Design bis zur Arbeit mit unbekannten Technologien - betont aber die Wichtigkeit, die Kontrolle zu behalten und keine 'Vibe-Coding'-Ansätze zu verfolgen.",
+    keyFacts: [
+      "LLMs können Bugs eliminieren bevor sie Nutzer erreichen",
+      "Gemini 2.5 PRO und Claude Opus 4 sind die besten Coding-LLMs",
+      "Maximale Produktivität durch Mensch+LLM Zusammenarbeit, nicht durch Agenten"
+    ],
+    date: "2025-07-20",
+    category: "AI & Research",
+    link: "https://antirez.com/news/154",
+    icon: Code2
   }
 ];
